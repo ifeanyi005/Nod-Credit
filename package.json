@@ -12,5 +12,8 @@
     "gulp-rename": "^1.2.2",
     "gulp-sass": "^3.2.1",
     "main-bower-files": "^2.13.1"
+  },
+  "dependencies": {
+    "feather-icons": "^4.24.1"
   }
 }
