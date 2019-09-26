@@ -33,6 +33,43 @@ body .alert-d-info p {
     margin-bottom: 12px;
 }
 
+.nod-card-height {
+    min-height: 180px;
+}
+
+.middle-align {
+    margin: auto 0;
+}
+
+body .nod-card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border-width: 0px;
+    border-radius: 3px;
+}
+
+body .nod-card-inner {
+    padding: 20px;
+    display: flex;
+    align-items: center;
+}
+
+body .card-shadow {
+    box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.01),
+        0 3px 3px 0 rgba(0, 0, 0, 0.01);
+}
+
+
+body .card-dash-one .row>div:nth-child(odd),
+body .card-dash-one .row>div:nth-child(even) {
+    background-color: inherit;
+}
+
 
 
 /* --------------------- NAVIGATON -------------------------- */
