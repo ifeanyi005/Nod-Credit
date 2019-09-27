@@ -1,9 +1,14 @@
+/* --------------------- GENERAL CSS-------------------------- */
 body .slim-header {
     background-color: #0668E3;
 }
 
+body .nodbluebg {
+    background-color: #0668E3 !important;
+}
+
 body .nodblue {
-    color: #0668E3;
+    color: #0668E3 !important;
 }
 
 body {
@@ -12,6 +17,10 @@ body {
 
 .dark-grey {
     color: #7A7C7F;
+}
+
+body .tx-light-grey {
+    color: rgba(255, 255, 255, 0.84);
 }
 
 
@@ -34,7 +43,7 @@ body .alert-d-info p {
 }
 
 .nod-card-height {
-    min-height: 180px;
+    min-height: 170px;
 }
 
 .middle-align {
@@ -70,7 +79,40 @@ body .card-dash-one .row>div:nth-child(even) {
     background-color: inherit;
 }
 
+.loan-amount h2 {
+    color: #6B6B6B;
+    font-size: 40px;
+    font-weight: 500;
+}
 
+
+.loan-amount label {
+    color: #253858;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 21px;
+    text-transform: uppercase;
+}
+
+
+body .loan-amount h2 sup {
+    top: -.42em;
+    font-size: 24px;
+    right: -.2em;
+}
+
+
+body .nod-header-p {
+    color: #6B6B6B;
+    font-size: 32px;
+    font-weight: 700;
+    letter-spacing: -0.2px;
+    line-height: 38px;
+}
+
+body .slim-footer {
+    background-color: #F4F6F9;
+}
 
 /* --------------------- NAVIGATON -------------------------- */
 
@@ -102,6 +144,10 @@ body .slim-navbar .nav-item.active .nav-link .icon {
     color: #0568e3;
 }
 
+body .slim-navbar .nav-link {
+    letter-spacing: 0.4px;
+}
+
 /* --------------------- ALERT INFO -------------------------- */
 
 body .alert-card-info {
@@ -110,6 +156,18 @@ body .alert-card-info {
     box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.10);
     padding: 20px;
     border-radius: 3px;
+}
+
+.card.alert-card-info::before {
+    content: "tect";
+    /* background-color: red; */
+    background-color: #FF9000;
+    position: absolute;
+    left: 0;
+    width: 8px;
+    color: transparent;
+    top: 0;
+    bottom: 0;
 }
 
 img.alert-icon {
@@ -125,4 +183,134 @@ span.alert-micon {
     color: #191919;
     opacity: 0.4345005580357143;
     text-align: center;
+}
+
+
+/* --------------------- Loan Dashboard -------------------------- */
+
+.upcomingLoan {
+    text-align: center;
+    color: #7A7C7F;
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+
+body a.pay-loan {
+    background-color: #FF9000;
+    border: 1px solid rgba(218, 226, 223, 0.45);
+    border-radius: 0 0 5px 5px;
+    box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.01), 0 3px 3px 0 rgba(0, 0, 0, 0.01);
+    padding: 10px 0;
+    margin-top: -13px;
+    color: white;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+body .card-dash-one .multicard>div {
+    padding: 0px;
+    display: flex;
+    align-items: center;
+}
+
+.nod-header-p-2 {
+    color: #7D95B6;
+    font-size: 16px;
+    font-weight: 500;
+    padding: 10px 25px 10px;
+}
+
+.light-grey-hr {
+    background-color: rgba(255, 255, 255, 0.4);
+}
+
+.nodscore p {
+    color: #FFFFFF;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 21px;
+}
+
+.nodscore ul {
+    list-style-type: none;
+    padding-inline-start: 0px;
+    color: #fff;
+}
+
+body .modal-body.nodscore ul p {
+    color: #565656;
+    vertical-align: top;
+}
+
+
+body .modal-body.nodscore ul p img {
+    vertical-align: top;
+    margin-top: 5px;
+}
+
+
+
+.nodscore ul p span {
+    display: block;
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.50)
+}
+
+.nodscore ul p {
+    display: inline-block;
+    font-size: 14px;
+}
+
+.nodscore ul img {
+    vertical-align: top;
+    border-style: none;
+    display: inline-block;
+    margin-top: 3px;
+    padding-right: 10px;
+}
+
+.nodscore ul li:last-child {
+    margin-bottom: -10px;
+}
+
+body .dash-content hr {
+    margin: 0px;
+    margin-bottom: 10px;
+}
+
+body .table thead>tr>th {
+    font-weight: 400;
+    font-size: 14px;
+    background-color: #3E3E3E;
+    color: #fff;
+    letter-spacing: 0.5px;
+    padding: 10px 25px;
+}
+
+body .table td {
+    color: #253858;
+    padding-left: 25px;
+}
+
+body .modal .modal-header {
+    background-color: inherit;
+    border-bottom-width: 0px;
+
+}
+
+body .modal .modal-header h6 {
+    font-size: 20px;
+    font-weight: 500;
+}
+
+
+.modal .modal-content {
+    border-radius: 10px !important;
+}
+
+body .modal-header {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
 }
