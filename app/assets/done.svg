@@ -1,0 +1,11 @@
+
+<svg width="80px" height="80px" viewBox="0 0 80 80" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+        <g id="Investor-Now-3" transform="translate(-643.000000, -424.000000)" stroke="#0668E3" stroke-width="3">
+            <g id="check-circle-(1)" transform="translate(645.000000, 426.000000)">
+                <path d="M76,34.5254115 L76,38.0211806 C75.9903777,54.8490751 64.9127484,69.6662992 48.774416,74.4375984 C32.6360837,79.2088975 15.2814669,72.7976691 6.12182659,58.6806678 C-3.0378137,44.5636664 -1.82049922,26.103796 9.11363076,13.3116872 C20.0477607,0.519578303 38.0940151,-3.55747645 53.4660636,3.29147499" id="Path"></path>
+                <polyline id="Path" points="76 8 38.3076923 46 27 34.6113886"></polyline>
+            </g>
+        </g>
+    </g>
+</svg>

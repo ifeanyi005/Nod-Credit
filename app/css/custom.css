@@ -19,6 +19,10 @@ body {
     color: #7A7C7F;
 }
 
+body .dark-two {
+    color: #212529;
+}
+
 body .tx-light-grey {
     color: rgba(255, 255, 255, 0.84);
 }
@@ -112,6 +116,7 @@ body .nod-header-p {
 
 body .slim-footer {
     background-color: #F4F6F9;
+
 }
 
 /* --------------------- NAVIGATON -------------------------- */
@@ -313,4 +318,184 @@ body .modal .modal-header h6 {
 body .modal-header {
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
+}
+
+.flexbox-centering {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+}
+
+
+.segment-active {
+    border: 1px dotted #0668E3;
+    padding: 10px;
+    width: 10px;
+    height: 10px;
+    border-radius: 30px;
+    background-color: #CEE1F8;
+}
+
+.segment-inactive {
+    border: 1px dotted rgba(6, 105, 227, 0.445);
+    padding: 10px;
+    width: 10px;
+    height: 10px;
+    border-radius: 30px;
+
+    transform: rotate(-90.1deg);
+    background: #EBF1F3;
+
+}
+
+.segment-bg {
+    min-width: 40%;
+}
+
+.segment-bg:last-child {
+    min-width: 0;
+}
+
+.segment-contents {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.segment-bg:first-child::after,
+.segment-bg:nth-child(2)::after,
+.segment-bg:nth-child(3)::after {
+    content: " ";
+    width: 107px;
+    border-bottom: 1px dotted #0668E3;
+    display: block;
+    position: absolute;
+    margin-left: 22px;
+    margin-top: -12px;
+    z-index: -10;
+}
+
+@media (max-width:500px) {
+
+    body .applyloan>.segment-bg:first-child::after,
+    body .applyloan>.segment-bg:nth-child(2)::after,
+    body .applyloan>.segment-bg:nth-child(3)::after {
+        content: " ";
+        width: 75px;
+        z-index: -10;
+    }
+
+    body .applyloan>.segment-bg {
+        min-width: 30%;
+    }
+
+    body .applyloan>.segment-bg:last-child {
+        min-width: 0;
+    }
+
+
+
+}
+
+body .loaninfo-box {
+
+    background-color: rgba(206, 225, 248, 0.5);
+    border-radius: 5px;
+}
+
+body .loaninfo-box p img {
+
+    margin-top: -5px;
+}
+
+body .btn-main {
+    background-color: #FF9000;
+    box-shadow: 0 10px 40px -10px rgba(255, 144, 0, 0.67);
+    border-radius: 4px;
+    width: auto;
+    color: #fff;
+    margin: 0 auto;
+    border-width: 0px;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+body .btn-main:hover {
+    background-color: rgb(211, 120, 0);
+    box-shadow: unset;
+    border-radius: 4px;
+    width: auto;
+    color: #fff;
+    margin: 0 auto;
+    border-width: 0px;
+}
+
+body .btn-primary:not(:disabled):not(.disabled):active {
+    color: #fff;
+    background-color: unset;
+    border-color: unset;
+}
+
+
+body .custom-file {
+    width: auto;
+}
+
+body .custom-file-label::after {
+    display: none;
+}
+
+body .custom-file-label {
+    padding: 0px;
+    background-color: transparent;
+    border: 0px;
+    color: #0668E3;
+}
+
+.documentname,
+.pdf {
+    vertical-align: text-top
+}
+
+body .close {
+    vertical-align: sub;
+    opacity: 1;
+}
+
+.documentname p span {
+    font-size: 12px;
+    color: #7D95B6;
+}
+
+ol.helpinfo {
+    color: #666667;
+    font-size: 12px;
+    padding-left: 15px;
+}
+
+ol.helpinfo li {
+    margin-bottom: 5px;
+}
+
+.applydetails {
+    padding: 10px 0;
+    border-bottom: 1px solid #D8D8D8
+}
+
+.applydetails .name {
+    font-size: 14px;
+    color: #7D95B6;
+}
+
+.applydetails .detail {
+    font-size: 14px;
+    color: #212529;
+}
+
+
+.applydetails.total .detail {
+    font-weight: 500;
+    font-size: 14px;
+    color: #0668E3;
 }

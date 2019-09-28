@@ -106,7 +106,7 @@
             <div class="flexbox-centering mg-t-50">
                 <div class="child text-center">
                     <div>
-                        <h3>Apply for Loan</h3>
+                        <h3>Upload Doments</h3>
                         <p>Complete the form below to apply for a new loan.</p>
                         <div class="segment-contents applyloan">
                             <div class="segment-bg">
@@ -115,8 +115,8 @@
                                 </a>
                             </div>
                             <div class="segment-bg">
-                                <a href="">
-                                    <div class="segment-inactive"></div>
+                                <a href="loanapply-2.html">
+                                    <div class="segment-active"></div>
                                 </a>
                             </div>
                             <div class="segment-bg">
@@ -140,37 +140,45 @@
                     <div class="card nod-card nod-card-height card-shadow mg-t-30 pd-20 dash-content">
                         <div class="row">
                             <div class="col-lg-6">
-
-                                <div class="form-layout">
-
-                                    <div class="col-lg-12">
+                                <p class="tx-medium">Upload Loan Documents</p>
+                                <p>You are required to upload at least 2 documents.</p>
+                                <form action="">
+                                    <div class="form-layout">
                                         <div class="form-group">
-                                            <label class="form-control-label">How much Loan do you want? </label>
-                                            <input class="form-control" type="text" name="firstname"
-                                                Placeholder="10,000" placeholder="Enter firstname" />
-                                            <span class="tx-10">(Min: NGN 10,000.00 Max: NGN 50,000.00)</span>
-                                        </div>
-                                        <div class="form-group">
-                                            <label class="form-control-label">Select Loan Tenor</label>
-                                            <select class="form-control select2" data-placeholder="Select Tenor">
-                                                <option label="Select Tenor"></option>
-                                                <option value="1month">1 Month</option>
-                                                <option value="2month">2 Month</option>
+                                            <label class="form-control-label tx-medium">Work ID,Bank Statement.</label>
+                                            <select class="form-control select2" data-placeholder="Select Document">
+                                                <option label="Select Document"></option>
+                                                <option value="Work ID">Work ID</option>
+                                                <option value="Bank Statement">Bank Statement</option>
 
-                                            </select>
-                                        </div>
-                                        <div class="form-group">
-                                            <label class=" form-control-label">What is the loan for?</label>
-                                            <select class="form-control select2" data-placeholder="Select Purpose">
-                                                <option label="Select Tenor"></option>
-                                                <option value="1month">House repair</option>
-                                                <option value="2month">Rent Completion</option>
                                             </select>
                                         </div>
                                     </div>
 
+                                    <div class="custom-file">
+                                        <input type="file" class="custom-file-input" id="customFile">
+                                        <label class="custom-file-label pss-blue" for="customFile"> <img
+                                                class="pd-r-5 nodblue" src="../assets/upload.svg" alt=""> Upload more
+                                            documents</label>
+                                    </div>
+                                </form>
+                                <div>
+                                    <div class="d-inline-flex pdf pd-r-10"><img src="../assets/pdf.svg" alt="" /></div>
+                                    <div class="d-inline-flex documentname">
+                                        <p>GTbank-Ifeanyi_2019_14…pdf <span class="d-block">2MB</span></p>
+                                    </div>
+                                    <div class="d-inline-flex close pd-t-5"><img src="../assets/close.svg" alt="" />
+                                    </div>
                                 </div>
 
+                                <div>
+                                    <div class="d-inline-flex pdf pd-r-10"><img src="../assets/jpg.svg" alt="" /></div>
+                                    <div class="d-inline-flex documentname">
+                                        <p>Office_ID.jpg <span class="d-block">1.2MB</span></p>
+                                    </div>
+                                    <div class="d-inline-flex close pd-t-5"><img src="../assets/close.svg" alt="" />
+                                    </div>
+                                </div>
 
                             </div>
 
@@ -179,10 +187,11 @@
                                 <div class="card loaninfo-box nod-card  mg-t-30 pd-20 dash-content">
                                     <p class="dark-two"><img class="pd-r-5 " src="../assets/help.svg" alt=""> <span
                                             class="dark-two tx-medium tx-16 mg-t-5">Help Message</span> </p>
-                                    <p class="tx-12">Enter loan amount you wish to get from
-                                        NodCredit. </p>
-                                    <p class="tx-12 mg-b-0-force">Add all the necessary document needed to
-                                        quickly process your loan request.</p>
+                                    <p class="tx-12">Bank Statement must be provided by <span class="tx-medium">GUARANTY
+                                            TRUST BANK.</span> </p>
+                                    <p class="tx-12 mg-b-0-force">Please, do not upload locked statement. The system
+                                        cannot parse locked bank statement. <span class="tx-medium">Remove password from
+                                            your PDF document.</span> </p>
                                 </div>
                             </div>
                         </div>
@@ -190,7 +199,10 @@
 
                     </div>
                     <div class="text-center mg-t-30">
-                        <a href="loanapply-2.html" class="btn btn-main">Continue</a>
+                        <div class="d-inline-flex mg-r-30"><a href="loanapply.html" class="">← Go back</a></div>
+                        <div class="d-inline-flex"><a href="loanapply-3.html"
+                                class="btn btn-primary btn-block btn-main">Continue</a>
+                        </div>
                     </div>
                 </div>
 
