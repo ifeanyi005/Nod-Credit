@@ -17,10 +17,15 @@ body {
 
 .dark-grey {
     color: #7A7C7F;
+
 }
 
 body .dark-two {
     color: #212529;
+}
+
+.tx-offwhite {
+    color: #7D95B6;
 }
 
 body .tx-light-grey {
@@ -77,6 +82,15 @@ body .card-shadow {
         0 3px 3px 0 rgba(0, 0, 0, 0.01);
 }
 
+.card-2 {
+    border-width: 0px !important;
+    border: 0px !important;
+    border-radius: 5px !important;
+}
+
+.table-head-radius {
+    border-radius: 5px 5px 0px 0px;
+}
 
 body .card-dash-one .row>div:nth-child(odd),
 body .card-dash-one .row>div:nth-child(even) {
@@ -96,6 +110,10 @@ body .card-dash-one .row>div:nth-child(even) {
     font-weight: 400;
     line-height: 21px;
     text-transform: uppercase;
+}
+
+.form-group label {
+    font-weight: 500;
 }
 
 
@@ -324,7 +342,6 @@ body .modal-header {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100px;
 }
 
 
@@ -421,6 +438,19 @@ body .btn-main {
     padding-right: 30px;
 }
 
+body .btn-table {
+    background: #FFFFFF;
+    border: 1px solid #E7E7E7;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.09);
+    border-radius: 1px;
+    color: #0668E3;
+}
+
+body .btn-table:focus {
+    outline: unset;
+    box-shadow: unset;
+}
+
 body .btn-main:hover {
     background-color: rgb(211, 120, 0);
     box-shadow: unset;
@@ -429,6 +459,10 @@ body .btn-main:hover {
     color: #fff;
     margin: 0 auto;
     border-width: 0px;
+}
+
+body .table-hover tbody tr:hover {
+    background-color: rgba(0, 73, 255, 0.05);
 }
 
 body .btn-primary:not(:disabled):not(.disabled):active {
@@ -498,4 +532,70 @@ ol.helpinfo li {
     font-weight: 500;
     font-size: 14px;
     color: #0668E3;
+}
+
+.repayamount h2:focus {
+    outline: unset;
+}
+
+body .loantab {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+}
+
+body .card-header-tabs .nav-link.active,
+body .nav-link.active {
+    border-bottom-color: #FF9000;
+    border-bottom-width: 3px;
+    background-color: transparent;
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 0px;
+    color: 212529;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+body .card-header-tabs .nav-link {
+    color: #7D95B6;
+    font-size: 16px;
+    font-weight: 400;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-bottom: 12px;
+    height: auto;
+}
+
+body .card-header-tabs .nav-link:hover,
+body .card-header-tabs .nav-link:focus {
+    background-color: transparent;
+}
+
+body .setting-padding {
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-top: 50px;
+}
+
+body .card-header {
+    padding-left: 50px;
+    border-color: #E3E8EE;
+}
+
+body .custom-nav-tabs {
+    background-color: #F5F7FD;
+    border-radius: 5px 5px 0 0 !important;
+    box-shadow: 0 1px 3px 0 #D7D7E0;
+    padding-bottom: 0px;
+    padding: 0px 50px;
+}
+
+body .custom-nav-tabs .navbar {
+    padding: 0.25rem 1rem;
+}
+
+body .table td {
+    vertical-align: middle;
 }

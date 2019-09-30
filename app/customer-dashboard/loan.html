@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content=" ">
+    <meta name="keywords" content="">
+    <!-- Favicon-->
+    <link rel="shortcut icon" href="../assets/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="../assets/favicon.ico" type="image/x-icon" />
+
+    <!-- Meta -->
+    <meta name="description" content="NodCredit Loan Dashboard">
+    <meta name="author" content="NodCredit">
+
+    <title>NodCredit Customer</title>
+
+    <!-- vendor css -->
+    <link href="../lib/font-awesome/css/font-awesome.css" rel="stylesheet">
+    <link href="../lib/Ionicons/css/ionicons.css" rel="stylesheet">
+    <link href="../lib/chartist/css/chartist.css" rel="stylesheet">
+    <link href="../lib/rickshaw/css/rickshaw.min.css" rel="stylesheet">
+
+    <!-- Slim CSS -->
+    <link rel="stylesheet" href="../css/custom.css">
+    <link rel="stylesheet" href="../css/slim.css">
+
+</head>
+
+<body>
+    <div class="slim-header">
+        <div class="container">
+            <div class="slim-header-left">
+                <h2 class="nod-logo slim-logo"><a href="/customer-dashboard/index.html"><img
+                            src="../assets/logo-white.svg" alt="NodCredit Logo" /></a>
+                </h2>
+
+                <!-- <div class="search-box">
+          <input type="text" class="form-control" placeholder="Search">
+          <button class="btn btn-primary"><i class="fa fa-search"></i></button>
+        </div> -->
+            </div><!-- slim-header-left -->
+            <div class="slim-header-right">
+                <div class="dropdown dropdown-c">
+                    <a href="#" class="logged-user" data-toggle="dropdown">
+                        <span class="tx-white">Ifeanyi Umunnakwe</span>
+                        <i class="fa fa-angle-down tx-white"></i>
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-right">
+                        <nav class="nav">
+                            <a href="" class="nav-link"><i class="icon ion-ios-gear"></i> Account Settings</a>
+                            <a href="" class="nav-link"><i class="icon ion-forward"></i> Sign Out</a>
+                        </nav>
+                    </div><!-- dropdown-menu -->
+                </div><!-- dropdown -->
+            </div><!-- header-right -->
+        </div><!-- container -->
+    </div><!-- slim-header -->
+
+    <div class="slim-navbar">
+        <div class="container">
+            <ul class="nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">
+                        <i class="icon ion-home"></i>
+                        <span>Dashboard</span>
+                    </a>
+                </li>
+                <li class="nav-item ">
+                    <a class="nav-link" href="loanapply.html">
+                        <i class="icon ion-ios-checkmark"></i>
+                        <span>Apply for Loan</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="repay.html">
+                        <i class="icon ion-ios-refresh"></i>
+                        <span>Loan Repayment</span>
+                    </a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="loan.html" data-toggle="dropdown">
+                        <i class="icon ion-ios-list"></i>
+                        <span>My Loans</span>
+                    </a>
+
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="page-messages.html">
+                        <i class="icon ion-ios-gear"></i>
+                        <span>Profile Settings</span>
+                    </a>
+                </li>
+
+            </ul>
+        </div><!-- container -->
+    </div><!-- slim-navbar -->
+
+    <div class="slim-mainpanel">
+        <div class="container">
+
+
+            <div class="mg-y-50">
+                <div class="child">
+                    <div>
+                        <h3>My Loans</h3>
+                        <div class="card card-shadow card-2 mg-t-15">
+                            <div class="table-responsive table-head-radius  ">
+                                <table class="table table-hover mg-b-0">
+                                    <thead class="">
+                                        <tr>
+                                            <th>Date</th>
+                                            <th>Loan Amount</th>
+                                            <th>Tenor</th>
+                                            <th>Interest</th>
+                                            <th>Loan Purpose</th>
+                                            <th>Status</th>
+                                            <th></th>
+
+                                        </tr>
+                                    </thead>
+                                    <tbody class="">
+                                        <tr>
+                                            <td>13, Sept 2019 12:22:53</td>
+                                            <td>₦ 50,000.00</td>
+                                            <td>1 Month</td>
+                                            <td>5%</td>
+                                            <td>Home Improvement</td>
+                                            <td><span class="square-8 bg-warning mg-r-5 rounded-circle"></span>
+                                                Pending</td>
+                                            <td>
+
+                                                <button class="btn btn-table" type="button">
+                                                    View Loan
+                                                </button>
+
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>13, Sept 2019 12:22:53</td>
+                                            <td>₦ 50,000.00</td>
+                                            <td>1 Month</td>
+                                            <td>5%</td>
+                                            <td>Home Improvement</td>
+                                            <td><span class="square-8 nodbluebg mg-r-5 rounded-circle"></span>
+                                                Approved</td>
+                                            <td>
+
+                                                <button class="btn btn-table" type="button">
+                                                    View Loan
+                                                </button>
+
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>13, Sept 2019 12:22:53</td>
+                                            <td>₦ 50,000.00</td>
+                                            <td>1 Month</td>
+                                            <td>5%</td>
+                                            <td>Home Improvement</td>
+                                            <td><span class="square-8 bg-success mg-r-5 rounded-circle"></span>
+                                                Completed</td>
+                                            <td>
+
+                                                <button class="btn btn-table" type="button">
+                                                    View Loan
+                                                </button>
+
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>13, Sept 2019 12:22:53</td>
+                                            <td>₦ 50,000.00</td>
+                                            <td>1 Month</td>
+                                            <td>5%</td>
+                                            <td>Home Improvement</td>
+                                            <td><span class="square-8 bg-danger mg-r-5 rounded-circle"></span>
+                                                Rejected</td>
+                                            <td>
+
+                                                <button class="btn btn-table" type="button">
+                                                    View Loan
+                                                </button>
+
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>13, Sept 2019 12:22:53</td>
+                                            <td>₦ 50,000.00</td>
+                                            <td>1 Month</td>
+                                            <td>5%</td>
+                                            <td>Home Improvement</td>
+                                            <td><span class="square-8 bg-success mg-r-5 rounded-circle"></span>
+                                                Completed</td>
+                                            <td>
+
+                                                <button class="btn btn-table" type="button">
+                                                    View Loan
+                                                </button>
+
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>13, Sept 2019 12:22:53</td>
+                                            <td>₦ 50,000.00</td>
+                                            <td>1 Month</td>
+                                            <td>5%</td>
+                                            <td>Home Improvement</td>
+                                            <td><span class="square-8 bg-success mg-r-5 rounded-circle"></span>
+                                                Completed</td>
+                                            <td>
+
+                                                <button class="btn btn-table" type="button">
+                                                    View Loan
+                                                </button>
+
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>13, Sept 2019 12:22:53</td>
+                                            <td>₦ 50,000.00</td>
+                                            <td>1 Month</td>
+                                            <td>5%</td>
+                                            <td>Home Improvement</td>
+                                            <td><span class="square-8 bg-success mg-r-5 rounded-circle"></span>
+                                                Completed</td>
+                                            <td>
+
+                                                <button class="btn btn-table" type="button">
+                                                    View Loan
+                                                </button>
+
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>13, Sept 2019 12:22:53</td>
+                                            <td>₦ 50,000.00</td>
+                                            <td>1 Month</td>
+                                            <td>5%</td>
+                                            <td>Home Improvement</td>
+                                            <td><span class="square-8 bg-success mg-r-5 rounded-circle"></span>
+                                                Completed</td>
+                                            <td>
+
+                                                <button class="btn btn-table" type="button">
+                                                    View Loan
+                                                </button>
+
+                                            </td>
+                                        </tr>
+
+                                    </tbody>
+                                </table>
+                            </div><!-- table-responsive -->
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+
+        </div><!-- container -->
+    </div><!-- slim-mainpanel -->
+
+    <!--<div class="slim-footer">
+        <div class="container">
+            <p>Copyright 2019 &copy; All Rights Reserved. NodCredit</p>
+            <p>Designed by: <a href="http://ifeanyiernest.com">Ifeanyi</a></p>
+        </div> container 
+    </div> slim-footer -->
+
+    <script src="../lib/jquery/js/jquery.js"></script>
+    <script src="../lib/popper.js/js/popper.js"></script>
+    <script src="../lib/bootstrap/js/bootstrap.js"></script>
+    <script src="../lib/jquery.cookie/js/jquery.cookie.js"></script>
+    <script src="../lib/chartist/js/chartist.js"></script>
+    <script src="../lib/d3/js/d3.js"></script>
+    <script src="../lib/rickshaw/js/rickshaw.min.js"></script>
+    <script src="../lib/jquery.sparkline.bower/js/jquery.sparkline.min.js"></script>
+
+    <script src="../js/ResizeSensor.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <script src="../js/dashboard.js"></script>
+    <script src="../js/slim.js"></script>
+</body>
+
+</html>

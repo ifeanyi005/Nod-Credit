@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content=" ">
+    <meta name="keywords" content="">
+    <!-- Favicon-->
+    <link rel="shortcut icon" href="../assets/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="../assets/favicon.ico" type="image/x-icon" />
+
+    <!-- Meta -->
+    <meta name="description" content="NodCredit Loan Dashboard">
+    <meta name="author" content="NodCredit">
+
+    <title>NodCredit Customer</title>
+
+    <!-- vendor css -->
+    <link href="../lib/font-awesome/css/font-awesome.css" rel="stylesheet">
+    <link href="../lib/Ionicons/css/ionicons.css" rel="stylesheet">
+    <link href="../lib/chartist/css/chartist.css" rel="stylesheet">
+    <link href="../lib/rickshaw/css/rickshaw.min.css" rel="stylesheet">
+
+    <!-- Slim CSS -->
+    <link rel="stylesheet" href="../css/custom.css">
+    <link rel="stylesheet" href="../css/slim.css">
+
+</head>
+
+<body>
+    <div class="slim-header">
+        <div class="container">
+            <div class="slim-header-left">
+                <h2 class="nod-logo slim-logo"><a href="/customer-dashboard/index.html"><img
+                            src="../assets/logo-white.svg" alt="NodCredit Logo" /></a>
+                </h2>
+
+                <!-- <div class="search-box">
+          <input type="text" class="form-control" placeholder="Search">
+          <button class="btn btn-primary"><i class="fa fa-search"></i></button>
+        </div> -->
+            </div><!-- slim-header-left -->
+            <div class="slim-header-right">
+                <div class="dropdown dropdown-c">
+                    <a href="#" class="logged-user" data-toggle="dropdown">
+                        <span class="tx-white">Ifeanyi Umunnakwe</span>
+                        <i class="fa fa-angle-down tx-white"></i>
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-right">
+                        <nav class="nav">
+                            <a href="" class="nav-link"><i class="icon ion-ios-gear"></i> Account Settings</a>
+                            <a href="" class="nav-link"><i class="icon ion-forward"></i> Sign Out</a>
+                        </nav>
+                    </div><!-- dropdown-menu -->
+                </div><!-- dropdown -->
+            </div><!-- header-right -->
+        </div><!-- container -->
+    </div><!-- slim-header -->
+
+    <div class="slim-navbar">
+        <div class="container">
+            <ul class="nav">
+                <li class="nav-item ">
+                    <a class="nav-link" href="index.html">
+                        <i class="icon ion-home"></i>
+                        <span>Dashboard</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="loanapply.html">
+                        <i class="icon ion-ios-checkmark"></i>
+                        <span>Apply for Loan</span>
+                    </a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="repay.html">
+                        <i class="icon ion-ios-refresh"></i>
+                        <span>Loan Repayment</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="loan.html">
+                        <i class="icon ion-ios-list"></i>
+                        <span>My Loans</span>
+                    </a>
+
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="page-messages.html">
+                        <i class="icon ion-ios-gear"></i>
+                        <span>Profile Settings</span>
+                    </a>
+                </li>
+
+            </ul>
+        </div><!-- container -->
+    </div><!-- slim-navbar -->
+
+    <div class="slim-mainpanel">
+        <div class="container">
+
+            <div class="flexbox-centering mg-t-50">
+                <div class="child text-center">
+                    <div>
+                        <h3>Loan Repayment</h3>
+                        <p>You can pause your NodCredit loan and you can also pay us back in splits.</p>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="row mg-b-50">
+                <!-- form -->
+                <div class="col-12 col-md-7 m-auto">
+                    <div class="card nod-card nod-card-height card-shadow pd-y-20 dash-content text-center">
+                        <p class="tx-12">Next Payment Friday 08 November 2019</p>
+                        <div class="repayamount">
+                            <h2 id="repayamount" class="text-center nodblue tx-40" contenteditable="true"
+                                onKeypress="if(event.keyCode < 48 || event.keyCode > 57){return false;}">
+                                ₦ 12,000</h2>
+                            <span class=" tx-10 tx-danger">Enter a value you want to repay now</span>
+
+                            <div class="card-header loantab">
+                                <ul class="nav nav-tabs card-header-tabs">
+                                    <li class="nav-item">
+                                        <a class="nav-link active" href="#popular" data-toggle="tab">Repay Loan</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#recent" data-toggle="tab">Pause Loan</a>
+                                    </li>
+
+                                </ul>
+                            </div><!-- card-header -->
+                            <div class="card-body">
+                                <div class="tab-content">
+                                    <div class="tab-pane active" id="popular">
+
+                                        <div class="text-left pd-x-40 pd-t-10">
+                                            <p class="mg-b-0  dark-two tx-16">
+                                                Loan Repayment Record
+                                            </p>
+                                            <p class="tx-14 tx-offwhite"> You can view your active loans record by
+                                                checking <a href="">Transaction
+                                                    History</a>
+                                            </p>
+
+                                            <div class="form-layout">
+                                                <div class="row">
+                                                    <div class="col-12 col-md-10">
+                                                        <div class="form-group">
+
+                                                            <label class="form-control-label">Select Card for
+                                                                Payment</label>
+                                                            <select class="form-control select2"
+                                                                data-placeholder="Select Card">
+                                                                <option label="Select Card"></option>
+                                                                <option value="card1">mastercard DEBIT - 539923***5177
+                                                                </option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="text-center mg-t-10">
+                                                <a href="" class="btn btn-main">Repay Loan</a>
+                                            </div>
+                                        </div>
+
+                                    </div><!-- tab-pane -->
+                                    <div class="tab-pane" id="recent">
+
+                                        <div class="text-left pd-x-40 pd-t-10">
+                                            <p class="mg-b-0 dark-two tx-16">
+                                                Pause your Loan
+                                            </p>
+                                            <p class="tx-14 tx-offwhite">You can pause your loan repayment on NodCredit.
+                                                We
+                                                will charge you <span class="nodblue">15%</span> of scheduled repayment
+                                                for that
+                                                month...</a>
+                                            </p>
+
+                                            <div class="form-layout">
+                                                <div class="row">
+                                                    <div class="col-12 col-md-10">
+                                                        <div class="form-group">
+
+                                                            <label class="form-control-label">Select Card for
+                                                                Payment</label>
+                                                            <select class="form-control select2"
+                                                                data-placeholder="Select Card">
+                                                                <option label="Select Card"></option>
+                                                                <option value="card1">mastercard DEBIT - 539923***5177
+                                                                </option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="text-center mg-t-10">
+                                                <a href="" class="btn btn-main">Pause Loan</a>
+                                            </div>
+                                        </div>
+
+                                    </div><!-- tab-pane -->
+
+                                </div><!-- tab-content -->
+                            </div><!-- card-body -->
+
+
+
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+            </div><!-- form -->
+
+
+
+
+
+
+
+        </div><!-- container -->
+    </div><!-- slim-mainpanel -->
+
+    <!--<div class="slim-footer">
+        <div class="container">
+            <p>Copyright 2019 &copy; All Rights Reserved. NodCredit</p>
+            <p>Designed by: <a href="http://ifeanyiernest.com">Ifeanyi</a></p>
+        </div> container 
+    </div> slim-footer -->
+
+    <script src="../lib/jquery/js/jquery.js"></script>
+    <script src="../lib/popper.js/js/popper.js"></script>
+    <script src="../lib/bootstrap/js/bootstrap.js"></script>
+    <script src="../lib/jquery.cookie/js/jquery.cookie.js"></script>
+    <script src="../lib/chartist/js/chartist.js"></script>
+    <script src="../lib/d3/js/d3.js"></script>
+    <script src="../lib/rickshaw/js/rickshaw.min.js"></script>
+    <script src="../lib/jquery.sparkline.bower/js/jquery.sparkline.min.js"></script>
+
+    <script src="../js/ResizeSensor.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <script src="../js/dashboard.js"></script>
+    <script src="../js/slim.js"></script>
+    <script>
+        function numberWithCommas(x) {
+            return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+        }
+
+        $(document).ready(function () {
+            var val = parseInt($('#repayamount').text());
+            //Use the code in the answer above to replace the commas.
+            val = numberWithCommas(val);
+            $('#repayamount').text(val);
+        });
+    </script>
+</body>
+
+</html>
