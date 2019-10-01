@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content=" ">
+    <meta name="keywords" content="">
+    <!-- Favicon-->
+    <link rel="shortcut icon" href="../assets/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="../assets/favicon.ico" type="image/x-icon" />
+
+    <!-- Meta -->
+    <meta name="description" content="NodCredit Loan Dashboard">
+    <meta name="author" content="NodCredit">
+
+    <title>NodCredit Customer</title>
+
+    <!-- vendor css -->
+    <link href="../lib/font-awesome/css/font-awesome.css" rel="stylesheet">
+    <link href="../lib/Ionicons/css/ionicons.css" rel="stylesheet">
+    <link href="../lib/chartist/css/chartist.css" rel="stylesheet">
+    <link href="../lib/rickshaw/css/rickshaw.min.css" rel="stylesheet">
+
+    <!-- Slim CSS -->
+    <link rel="stylesheet" href="../css/custom.css">
+    <link rel="stylesheet" href="../css/slim.css">
+
+</head>
+
+<body>
+    <div class="slim-header">
+        <div class="container">
+            <div class="slim-header-left">
+                <h2 class="nod-logo slim-logo"><a href="/customer-dashboard/index.html"><img
+                            src="../assets/logo-white.svg" alt="NodCredit Logo" /></a>
+                </h2>
+
+                <!-- <div class="search-box">
+          <input type="text" class="form-control" placeholder="Search">
+          <button class="btn btn-primary"><i class="fa fa-search"></i></button>
+        </div> -->
+            </div><!-- slim-header-left -->
+            <div class="slim-header-right">
+                <div class="dropdown dropdown-c">
+                    <a href="#" class="logged-user" data-toggle="dropdown">
+                        <span class="tx-white">Ifeanyi Umunnakwe</span>
+                        <i class="fa fa-angle-down tx-white"></i>
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-right">
+                        <nav class="nav">
+                            <a href="settings.html" class="nav-link"><i class="icon ion-ios-gear"></i> Account
+                                Settings</a>
+                            <a href="" class="nav-link"><i class="icon ion-forward"></i> Sign Out</a>
+                        </nav>
+                    </div><!-- dropdown-menu -->
+                </div><!-- dropdown -->
+            </div><!-- header-right -->
+        </div><!-- container -->
+    </div><!-- slim-header -->
+
+    <div class="slim-navbar">
+        <div class="container">
+            <ul class="nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">
+                        <i class="icon ion-home"></i>
+                        <span>Dashboard</span>
+                    </a>
+                </li>
+                <li class="nav-item ">
+                    <a class="nav-link" href="loanapply.html">
+                        <i class="icon ion-ios-checkmark"></i>
+                        <span>Apply for Loan</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="repay.html">
+                        <i class="icon ion-ios-refresh"></i>
+                        <span>Loan Repayment</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="loan.html">
+                        <i class="icon ion-ios-list"></i>
+                        <span>My Loans</span>
+                    </a>
+
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="settings.html">
+                        <i class="icon ion-ios-gear"></i>
+                        <span>Profile Settings</span>
+                    </a>
+                </li>
+
+            </ul>
+        </div><!-- container -->
+    </div><!-- slim-navbar -->
+
+    <div class="slim-mainpanel">
+        <div class="container">
+
+            <div class="mg-y-50">
+
+                <div class="flexbox-centering">
+                    <div class="child text-center">
+                        <div>
+                            <h3>Add Another Work History</h3>
+                            <p class="dark-grey">Add work experience as it helps with your loan application</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row ">
+                    <div class="col-12 col-sm-6 m-auto">
+                        <div class="card nod-card nod-card-height card-shadow pd-25 dash-content">
+                            <div class="form-layout">
+                                <div class="form-group">
+                                    <label class="form-control-label">Employer Name</label>
+                                    <input class="form-control" type="text" name="fullname"
+                                        placeholder="Employer name" />
+                                </div>
+
+
+                                <div class="row">
+                                    <div class="col-6">
+                                        <div class="form-group">
+                                            <label class="form-control-label">Office Work Email</label>
+                                            <input class="form-control" type="text" name="fullname"
+                                                placeholder="Work Email" />
+                                        </div>
+                                    </div>
+                                    <div class="col-6">
+                                        <div class="form-group">
+                                            <label class="form-control-label">Employer Website</label>
+                                            <input class="form-control" type="text" name="fullname"
+                                                placeholder="Employer Website" />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class=" form-group">
+                                    <label class="form-control-label">Office Address</label>
+                                    <input class="form-control" type="text" name="fullname"
+                                        placeholder="office address" />
+                                </div>
+
+                                <div class="form-group">
+                                    <label class="form-control-label">Phone Number</label>
+                                    <input class="form-control" type="text" name="fullname"
+                                        placeholder="Phone Number" />
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-3">
+                                        <div class="form-group">
+                                            <label class="form-control-label">Start Month</label>
+                                            <select class="form-control select2" data-placeholder="Select Month">
+                                                <option label="Select Month"></option>
+                                                <option value="jan">January</option>
+                                                <option value="feb">February</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-3">
+                                        <div class="form-group">
+                                            <label class="form-control-label">Start Year</label>
+                                            <select class="form-control select2" data-placeholder="Select Year">
+                                                <option label="Select Year"></option>
+                                                <option value="2010">2010</option>
+                                                <option value="2011">2011</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-3">
+                                        <div class="form-group">
+                                            <label class="form-control-label">End Month</label>
+                                            <select class="form-control select2" data-placeholder="Select Month">
+                                                <option label="Select Month"></option>
+                                                <option value="jan">January</option>
+                                                <option value="feb">February</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-3">
+                                        <div class="form-group">
+                                            <label class="form-control-label">End Year</label>
+                                            <select class="form-control select2" data-placeholder="Select Year">
+                                                <option label="Select Year"></option>
+                                                <option value="2010">2010</option>
+                                                <option value="2011">2011</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="text-center mg-t-30">
+                    <div class="d-inline-flex mg-r-30"><a href="settings.html#recent" class="dark-two">Cancel</a></div>
+                    <div class="d-inline-flex"><a href="settings.html#recent"
+                            class="btn btn-primary btn-block btn-main">Add
+                            Work history</a>
+                    </div>
+                </div>
+            </div>
+
+        </div><!-- container -->
+    </div><!-- slim-mainpanel -->
+
+    <!--<div class="slim-footer">
+        <div class="container">
+            <p>Copyright 2019 &copy; All Rights Reserved. NodCredit</p>
+            <p>Designed by: <a href="http://ifeanyiernest.com">Ifeanyi</a></p>
+        </div> container 
+    </div> slim-footer -->
+
+    <script src="../lib/jquery/js/jquery.js"></script>
+    <script src="../lib/popper.js/js/popper.js"></script>
+    <script src="../lib/bootstrap/js/bootstrap.js"></script>
+    <script src="../lib/jquery.cookie/js/jquery.cookie.js"></script>
+    <script src="../lib/chartist/js/chartist.js"></script>
+    <script src="../lib/d3/js/d3.js"></script>
+    <script src="../lib/rickshaw/js/rickshaw.min.js"></script>
+    <script src="../lib/jquery.sparkline.bower/js/jquery.sparkline.min.js"></script>
+
+    <script src="../js/ResizeSensor.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <script src="../js/dashboard.js"></script>
+    <script src="../js/slim.js"></script>
+</body>
+
+</html>

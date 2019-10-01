@@ -65,14 +65,14 @@
     <div class="slim-navbar">
         <div class="container">
             <ul class="nav">
-                <li class="nav-item ">
+                <li class="nav-item">
                     <a class="nav-link" href="index.html">
                         <i class="icon ion-home"></i>
                         <span>Dashboard</span>
                     </a>
                 </li>
-                <li class="nav-item active">
-                    <a class="nav-link" href="#">
+                <li class="nav-item ">
+                    <a class="nav-link" href="loanapply.html">
                         <i class="icon ion-ios-checkmark"></i>
                         <span>Apply for Loan</span>
                     </a>
@@ -83,7 +83,7 @@
                         <span>Loan Repayment</span>
                     </a>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item active">
                     <a class="nav-link" href="loan.html">
                         <i class="icon ion-ios-list"></i>
                         <span>My Loans</span>
@@ -104,47 +104,27 @@
     <div class="slim-mainpanel">
         <div class="container">
 
-            <div class="flexbox-centering mg-t-50">
-                <div class="child text-center">
-                    <div>
-                        <h3>Review Application</h3>
-                        <p>Complete the form below to apply for a new loan.</p>
-                        <div class="segment-contents applyloan">
-                            <div class="segment-bg">
-                                <a href="loanapply.html">
-                                    <div class="segment-active"></div>
-                                </a>
-                            </div>
-                            <div class="segment-bg">
-                                <a href="loanapply-2.html">
-                                    <div class="segment-active"></div>
-                                </a>
-                            </div>
-                            <div class="segment-bg">
-                                <a href="loanapply-3.html">
-                                    <div class="segment-active"></div>
-                                </a>
-                            </div>
-                            <div class="segment-bg">
-                                <a href="">
-                                    <div class="segment-inactive"></div>
-                                </a>
-                            </div>
-                        </div>
+            <div class="mg-y-50">
+                <div class="row">
+                    <div class="col-sm-6 m-auto">
+                        <a class="dark-two" href="loan.html">← Go back to Loans</a>
+                        <h3 class="pd-t-10">Loan Details</h3>
+                    </div>
+                    <div class="col-sm-6 m-auto loanstatus">
+                        <div class="pd-r-10">Date Applied: Apr 18 , 2019 at 10:00 AM </div>
+                        <div class="completed">Completed</div>
                     </div>
                 </div>
-            </div>
 
-            <div class="row mg-b-50">
-                <!-- form -->
-                <div class="col-12 col-md-8 m-auto">
-                    <div class="card nod-card nod-card-height card-shadow mg-t-30 pd-20 dash-content">
-                        <div class="row">
-                            <div class="col-lg-6">
-                                <p class="tx-normal">Please review your details below, then click ‘Apply’ to proceed
-                                    with the loan application.</p>
-
-                                <div class="applydetails">
+                <div class="row mg-b-50">
+                    <!-- form -->
+                    <div class="col-md-5">
+                        <div class="card nod-card nod-card-height card-shadow mg-t-30  dash-content">
+                            <div class="nod-header-p-2 pd-x-20">Loan Information
+                            </div>
+                            <hr class="mg-0">
+                            <div class="pd-x-20">
+                                <div class=" applydetails">
                                     <div class="d-inline-flex name">Loan Amount</div>
                                     <div class="d-inline-flex float-right detail ">₦12,000</div>
                                 </div>
@@ -164,7 +144,7 @@
                                     <div class="d-inline-flex name">Total</div>
                                     <div class="d-inline-flex float-right detail">₦15,000</div>
                                 </div>
-                                <div class="mg-t-30">
+                                <div class="mg-t-20">
                                     <div class="d-inline-flex pdf pd-r-10"><img src="../assets/pdf.svg" alt="" /></div>
                                     <div class="d-inline-flex documentname">
                                         <p>GTbank-Ifeanyi_2019_14…pdf <span class="d-block">2MB</span></p>
@@ -181,47 +161,78 @@
                                     <div class="d-inline-flex close pd-t-5"><img src="../assets/close.svg" alt="" />
                                     </div>
                                 </div>
-
-                            </div>
-
-
-                            <div class="col-lg-6">
-                                <div class="card loaninfo-box nod-card  mg-t-30 pd-20 dash-content">
-                                    <p class="dark-two"><img class="pd-r-5 " src="../assets/help.svg" alt=""> <span
-                                            class="dark-two tx-medium tx-16 mg-t-5">Help Message</span> </p>
-                                    <ol class="list-group helpinfo">
-                                        <li class="list-item">Kindly review the details of your transaction here.
-                                        </li>
-                                        <li class="list-item">Ensure all the details are correct before you proceed.
-                                        </li>
-                                        <li class="list-item">You can still go back to change any detail.
-                                        </li>
-                                        <li class="list-item"> See our FAQ’s for more help.
-                                        </li>
-
-                                    </ol>
-                                </div>
                             </div>
                         </div>
-
-
                     </div>
-                    <div class="text-center mg-t-30">
-                        <div class="d-inline-flex mg-r-30"><a href="loanapply-2.html" class="dark-two">← Go back</a>
-                        </div>
-                        <div class="d-inline-flex"><a href="loansuccess.html" class="btn btn-main">Apply</a>
+                    <div class="col-md-7">
+                        <div class="card nod-card nod-card-height card-shadow mg-t-30 dash-content">
+                            <div class="nod-header-p-2">Transaction Activities</div>
+                            <hr class="mg-0-force">
+
+
+                            <div class="table-responsive ">
+                                <table class="table table-hover mg-b-0">
+                                    <thead class="pd-l-25">
+                                        <tr>
+                                            <th>Date</th>
+                                            <th>Description</th>
+                                            <th>Amount Paid</th>
+                                            <th>Loan Balance</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody class="pd-l-25">
+                                        <tr>
+                                            <td>13, Sept</td>
+                                            <td>Loan Repayment</td>
+                                            <td>₦ 5,000.00</td>
+                                            <td>₦ 5,000.00</td>
+                                        </tr>
+                                        <tr>
+                                            <td>13, Sept</td>
+                                            <td>Loan Repayment</td>
+                                            <td>₦ 5,000.00</td>
+                                            <td>₦ 5,000.00</td>
+                                        </tr>
+                                        <tr>
+                                            <td>13, Sept</td>
+                                            <td>Loan Repayment</td>
+                                            <td>₦ 5,000.00</td>
+                                            <td>₦ 5,000.00</td>
+                                        </tr>
+                                        <tr>
+                                            <td>13, Sept</td>
+                                            <td>Loan Repayment</td>
+                                            <td>₦ 5,000.00</td>
+                                            <td>₦ 5,000.00</td>
+                                        </tr>
+                                        <tr>
+                                            <td>13, Sept</td>
+                                            <td>Loan Repayment</td>
+                                            <td>₦ 5,000.00</td>
+                                            <td>₦ 5,000.00</td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>13, Sept</td>
+                                            <td>Loan Repayment</td>
+                                            <td>₦ 5,000.00</td>
+                                            <td>₦ 5,000.00</td>
+                                        </tr>
+                                        <tr>
+                                            <td>13, Sept</td>
+                                            <td>Loan Repayment</td>
+                                            <td>₦ 5,000.00</td>
+                                            <td>₦ 5,000.00</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div><!-- table-responsive -->
                         </div>
                     </div>
                 </div>
 
 
-            </div><!-- form -->
-
-
-
-
-
-
+            </div>
 
         </div><!-- container -->
     </div><!-- slim-mainpanel -->
