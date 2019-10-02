@@ -120,9 +120,12 @@
                     <div class="card nod-card nod-card-height card-shadow pd-y-20 dash-content text-center">
                         <p class="tx-12">Next Payment Friday 08 November 2019</p>
                         <div class="repayamount">
+                            <h2 class="text-center nodblue tx-40"
+                                onKeypress="if(event.keyCode < 48 || event.keyCode > 57){return false;}">
+                                ₦ </h2>
                             <h2 id="repayamount" class="text-center nodblue tx-40" contenteditable="true"
                                 onKeypress="if(event.keyCode < 48 || event.keyCode > 57){return false;}">
-                                ₦ 12,000</h2>
+                                12,000</h2>
                             <span class=" tx-10 tx-danger">Enter a value you want to repay now</span>
 
                             <div class="card-header loantab">

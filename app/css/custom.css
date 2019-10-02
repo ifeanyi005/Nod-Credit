@@ -554,6 +554,14 @@ ol.helpinfo li {
     outline: unset;
 }
 
+.repayamount h2 {
+    display: inline-flex;
+}
+
+.repayamount span {
+    display: block;
+}
+
 body .loantab {
     display: flex;
     justify-content: center;
