@@ -20,6 +20,10 @@ body {
 
 }
 
+body .borderless-bottom {
+    border-bottom-width: 0px;
+}
+
 body .dark-two {
     color: #212529;
 }
@@ -397,6 +401,11 @@ body .modal-header {
     z-index: -10;
 }
 
+
+.invest .segment-bg:nth-child(3)::after {
+    content: unset !important;
+}
+
 @media (max-width:500px) {
 
     body .applyloan>.segment-bg:first-child::after,
@@ -655,6 +664,10 @@ body .table td {
     border-radius: 23px;
 }
 
+body .red {
+    color: #ff0000 !important;
+}
+
 .rejected {
     color: #ff0000;
     padding: 5px 15px;
@@ -667,7 +680,7 @@ body .card-header.settingstab {
     padding-left: 5px;
 }
 
-@media (max-width: 576px) {
+@media (max-width: 767px) {
     .card-30 {
         margin-top: 30px;
     }
@@ -741,4 +754,268 @@ body .deleteCard img {
 body .logged-user span,
 body .logged-user i {
     display: block;
+}
+
+
+body .nod-radio .rdiobox {
+    background-color: #FFFFFF;
+    border-radius: 5px;
+    /* padding: 10px 15px; */
+}
+
+body .nod-radio label {
+    margin-bottom: 0px;
+}
+
+.rdiobox input:checked~span {
+    color: #0744DD;
+    opacity: 1;
+}
+
+.nod-radio .rdiobox span:before {
+    display: none;
+}
+
+.nod-radio .rdiobox input[type='radio'] {
+    opacity: 0;
+    /* margin: 0 5px 0 0; */
+    visibility: hidden;
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+.nod-radio .rdiobox input[type='radio']:checked {
+    opacity: 0;
+    /* margin: 0 5px 0 0; */
+    visibility: hidden;
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+    color: #0668E3;
+    opacity: 100%;
+    border: 1px solid #0668E3;
+    background-color: #FFFFFF;
+    border: 1px solid #0668E3;
+    border-radius: 50px;
+    padding: 10px 15px;
+}
+
+.nod-radio .rdiobox input~span {
+    color: #697788;
+    border: 1px solid #E3E3E3;
+    border-radius: 50px;
+    padding: 10px 15px;
+    display: block;
+}
+
+.nod-radio .rdiobox input:checked~span {
+    color: #0668E3;
+
+    background-color: rgba(206, 225, 248, 0.44);
+
+    box-shadow: 0 0 10px 0 rgba(86, 86, 86, 0.20);
+
+    border: 1px solid #0668E3;
+    border-radius: 50px;
+    padding: 10px 15px;
+    display: block;
+}
+
+.nod-radio .rdiobox input[type='radio']:checked+span:after {
+    display: none;
+}
+
+body .selector .form-check-inline {
+
+    margin-right: 0rem;
+}
+
+body .dataTables_length {
+    display: none;
+}
+
+body .table-wrapper {
+    background-color: #FFFFFF;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px 0 #D7D7E0;
+}
+
+body .overview .table-wrapper {
+
+    border-radius: 0px 0px 5px 5px;
+
+}
+
+body .overview th.wd-20p {
+
+    width: 15%;
+
+}
+
+body .overview th.wd-10p {
+
+    width: 25%;
+
+}
+
+body .search-box.search-2 .form-control {
+    width: 100%;
+}
+
+body .search-box.search-2 .btn {
+    background-color: transparent;
+    color: black;
+}
+
+body .search-box.search-2 {
+    height: 43px;
+    border-radius: 5px;
+}
+
+body .search-box.search-2 .form-control {
+    padding-left: 0px;
+
+}
+
+body .table-nod select.form-control:not([size]):not([multiple]) {
+    background: #FFFFFF;
+    box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    border-width: 0px;
+}
+
+body .table-nod select.form-control:not([size]):not([multiple]),
+body .search-box.search-2 {
+    background: #FFFFFF;
+    box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    border-width: 0px;
+}
+
+
+body .dataTables_wrapper .dataTables_paginate .paginate_button.disabled,
+body .dataTables_wrapper .dataTables_paginate .paginate_button.current,
+body .dataTables_wrapper .dataTables_paginate .paginate_button,
+body .dataTables_wrapper .dataTables_paginate .paginate_button.current:hover,
+body .dataTables_wrapper .dataTables_paginate .paginate_button.current:focus {
+    background-color: transparent;
+
+}
+
+body .dataTables_wrapper .dataTables_paginate .paginate_button.current {
+    color: #B9BBC4 !important;
+}
+
+body .dataTables_wrapper .dataTables_paginate .paginate_button {
+    color: #0744DD !important;
+}
+
+body .dataTables_wrapper .dataTables_paginate .paginate_button:hover,
+body .dataTables_wrapper .dataTables_paginate .paginate_button.current:hover {
+    background-color: transparent;
+    color: #B9BBC4 !important;
+    /* border-right: 1px solid; */
+    border-left: 1px solid;
+}
+
+body .dataTables_wrapper .dataTables_paginate .paginate_button {
+    border-left: 1px solid #B9BBC4;
+}
+
+body .dataTables_wrapper .dataTables_paginate .paginate_button.current,
+body .dataTables_wrapper .dataTables_paginate .paginate_button.current {
+    border: unset;
+    border-right: 1px solid;
+    border-left: 1px solid;
+}
+
+body .dataTables_wrapper .dataTables_paginate .paginate_button.disabled,
+body .dataTables_wrapper .dataTables_paginate .paginate_button.disabled:hover {
+    background-color: transparent;
+}
+
+body .dataTables_wrapper .dataTables_paginate .paginate_button {
+    margin-left: 0px;
+}
+
+body a.paginate_button.previous {
+    border-left: 0px !important;
+}
+
+body a.paginate_button.next {
+    border-left: 1px solid !important;
+}
+
+body table.dataTable.no-footer {
+    border-bottom: 1px solid #DFE3E6 !important;
+}
+
+body table.dataTable {
+    margin-bottom: -5px;
+}
+
+body table.dataTable tbody tr:hover,
+body table.dataTable.hover tbody tr:hover,
+body table.dataTable.display tbody tr:hover {
+    background-color: #F8F9FA;
+    cursor: pointer;
+}
+
+
+
+table.dataTable.display tbody td {
+    padding-left: 25px;
+
+}
+
+body table.dataTable thead th.sorting::after,
+body table.dataTable thead th.sorting_asc::after,
+body table.dataTable thead th.sorting_desc::after,
+body table.dataTable thead td.sorting::after,
+body table.dataTable thead td.sorting_asc::after,
+body table.dataTable thead td.sorting_desc::after,
+body table.dataTable thead th.sorting::before,
+body table.dataTable thead th.sorting_asc::before,
+body table.dataTable thead th.sorting_desc::before,
+body table.dataTable thead td.sorting::before,
+body table.dataTable thead td.sorting_asc::before,
+body table.dataTable thead td.sorting_desc::before {
+    content: unset;
+}
+
+body .dataTables_wrapper .dataTables_info {
+    padding-left: 25px;
+    padding-top: 15px;
+}
+
+@media (max-width:991px) {
+    body .search-box {
+        display: block;
+    }
+}
+
+body table.dataTable.display tbody tr.odd>.sorting_1,
+body table.dataTable.display tbody tr.even>.sorting_1,
+body table.dataTable.display tbody tr.odd {
+    background-color: transparent;
+}
+
+a.support:hover {
+    color: white;
+}
+
+body .support ul {
+    padding-left: 25px;
+    list-style-image: url('../assets/arrow-right.svg');
+
+}
+
+body .support ul li {
+    padding-bottom: 10px;
+
 }

@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content=" ">
+    <meta name="keywords" content="">
+    <!-- Favicon-->
+    <link rel="shortcut icon" href="../assets/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="../assets/favicon.ico" type="image/x-icon" />
+
+    <!-- Meta -->
+    <meta name="description" content="NodCredit Loan Dashboard">
+    <meta name="author" content="NodCredit">
+
+    <title>NodCredit Customer</title>
+
+    <!-- vendor css -->
+    <link href="../lib/font-awesome/css/font-awesome.css" rel="stylesheet">
+    <link href="../lib/Ionicons/css/ionicons.css" rel="stylesheet">
+    <link href="../lib/chartist/css/chartist.css" rel="stylesheet">
+    <link href="../lib/rickshaw/css/rickshaw.min.css" rel="stylesheet">
+    <link href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css" rel="stylesheet">
+
+    <!-- Slim CSS -->
+    <link rel="stylesheet" href="../css/custom.css">
+    <link rel="stylesheet" href="../css/slim.css">
+
+</head>
+
+<body>
+    <div class="slim-header">
+        <div class="container">
+            <div class="slim-header-left">
+                <h2 class="nod-logo slim-logo"><a href="/customer-dashboard/index.html"><img
+                            src="../assets/logo-white.svg" alt="NodCredit Logo" /></a>
+                </h2>
+
+                <!-- <div class="search-box">
+          <input type="text" class="form-control" placeholder="Search">
+          <button class="btn btn-primary"><i class="fa fa-search"></i></button>
+        </div> -->
+            </div><!-- slim-header-left -->
+            <div class="slim-header-right">
+                <div class="dropdown dropdown-c">
+                    <a href="#" class="logged-user" data-toggle="dropdown">
+                        <span class="tx-white">Ifeanyi Umunnakwe</span>
+                        <i class="fa fa-angle-down tx-white"></i>
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-right">
+                        <nav class="nav">
+                            <a href="settings.html" class="nav-link"><i class="icon ion-ios-gear"></i> Account
+                                Settings</a>
+                            <a href="" class="nav-link"><i class="icon ion-forward"></i> Sign Out</a>
+                        </nav>
+                    </div><!-- dropdown-menu -->
+                </div><!-- dropdown -->
+            </div><!-- header-right -->
+        </div><!-- container -->
+    </div><!-- slim-header -->
+
+    <div class="slim-navbar">
+        <div class="container">
+            <ul class="nav">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">
+                        <i class="icon ion-md-home"></i>
+                        <span>Dashboard</span>
+                    </a>
+                </li>
+                <li class="nav-item ">
+                    <a class="nav-link" href="invest.html">
+
+                        <i class="icon ion-ios-rocket"></i>
+                        <span>Invest</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="investments.html">
+                        <i class="icon ion-ios-list"></i>
+                        <span>My Investments</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="settings.html">
+                        <i class="icon ion-ios-gear"></i>
+                        <span>Profile Settings</span>
+                    </a>
+                </li>
+
+            </ul>
+        </div><!-- container -->
+    </div><!-- -->
+
+    <div class="slim-mainpanel">
+        <div class="container mg-y-50">
+
+
+            <div class="row no-gutters ">
+                <div class="col-lg-12">
+                    <div class="row">
+                        <div class="col-md-8">
+
+                            <div class="nod-card nod-card-height card-30  card-shadow pd-auto ">
+                                <div class="card-dash-one middle-align ">
+
+                                    <div class="row multicard no-gutters">
+
+                                        <div class="col-lg-4 ">
+                                            <div class="box-info m-auto text-center pd-15 loan-amount">
+                                                <h2 class="nodblue"> <sup>₦</sup> 530,534</h2>
+                                                <label class="dark-grey">Total Returns</label>
+                                            </div><!-- dash-content -->
+                                        </div><!-- col-3 -->
+
+                                        <div class="col-lg-4">
+                                            <div class="box-info m-auto text-center pd-15 loan-amount">
+                                                <h2> <sup>₦</sup> 500,000</h2>
+                                                <label class="dark-grey">Total Investment</label>
+                                            </div><!-- dash-content -->
+                                        </div><!-- col-3 -->
+
+                                        <div class="col-lg-4">
+                                            <div class="box-info m-auto text-center pd-15 loan-amount">
+                                                <h2> <sup>₦</sup> 30,534</h2>
+                                                <label class="dark-grey">Interest Accrued</label>
+                                            </div><!-- dash-content -->
+                                        </div><!-- col-3 -->
+
+                                    </div><!-- row -->
+
+                                </div><!-- card -->
+
+
+                            </div>
+
+
+                            <div class="nod-card nod-card-height mg-t-30 card-30  card-shadow pd-auto ">
+                                <div class="card-dash-one overview ">
+                                    <div class="nod-header-p-2">Recent Investments</div>
+                                    <hr class="mg-0">
+
+                                    <div class="table-wrapper table-responsive">
+                                        <table id="datatable2" class="table display responsive nowrap">
+                                            <thead>
+                                                <tr>
+                                                    <th class="wd-15p">Investment Name</th>
+                                                    <th class="wd-15p">Net Amount</th>
+                                                    <th class="wd-20p">Rate</th>
+                                                    <th class="wd-15p">Current Returns</th>
+                                                    <th class="wd-10p">Status</th>
+                                                    <th></th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+
+                                                <tr>
+                                                    <td>My First Investment</td>
+                                                    <td>₦ 500,000</td>
+                                                    <td>30%</td>
+                                                    <td>₦ 5,000</td>
+                                                    <td><span class="square-8 nodbluebg mg-r-5 rounded-circle"></span>
+                                                        Active</td>
+                                                    <td><a href="activeinvestment.html" class="btn btn-table">
+                                                            View
+                                                        </a></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>My First Investment</td>
+                                                    <td>₦ 500,000</td>
+                                                    <td>30%</td>
+                                                    <td>₦ 5,000</td>
+                                                    <td><span class="square-8 bg-success mg-r-5 rounded-circle"></span>
+                                                        Completed</td>
+                                                    <td><a href="investdetail.html" class="btn btn-table">
+                                                            View
+                                                        </a></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>My First Investment</td>
+                                                    <td>₦ 500,000</td>
+                                                    <td>30%</td>
+                                                    <td>₦ 5,000</td>
+                                                    <td><span class="square-8 bg-danger mg-r-5 rounded-circle"></span>
+                                                        Liquidated</td>
+                                                    <td><a href="investdetail-liquidated.html" class="btn btn-table">
+                                                            View
+                                                        </a></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>My First Investment</td>
+                                                    <td>₦ 500,000</td>
+                                                    <td>30%</td>
+                                                    <td>₦ 5,000</td>
+                                                    <td><span class="square-8 bg-success mg-r-5 rounded-circle"></span>
+                                                        Completed</td>
+                                                    <td><a href="investdetail.html" class="btn btn-table">
+                                                            View
+                                                        </a></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>My First Investment</td>
+                                                    <td>₦ 500,000</td>
+                                                    <td>30%</td>
+                                                    <td>₦ 5,000</td>
+                                                    <td><span class="square-8 bg-success mg-r-5 rounded-circle"></span>
+                                                        Completed</td>
+                                                    <td><a href="investdetail.html" class="btn btn-table">
+                                                            View
+                                                        </a></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+
+
+
+                                </div><!-- card -->
+
+                            </div>
+
+                        </div>
+                        <div class="col-md-4 card-30">
+                            <div class="card nod-card card-shadow dash-content">
+
+                                <div class="nod-header-p-2">Investment Tips</div>
+                                <hr>
+
+                                <div class=" m-auto pd-x-25 support ">
+                                    <p class="tx-medium">You are eligible to invest once you
+                                        successfully created your account.</p>
+                                    <ul>
+                                        <li>Debit/Credit Card. Card should be
+                                            valid at
+                                            least 3 months and match your banking institution</li>
+                                        <li>Work History/Employment Information</li>
+                                        <li>Enter more information that help with making an investment</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="card nodbluebg nod-card card-shadow mg-t-30  dash-content">
+
+
+                                <div class="pd-35 ">
+                                    <div class="row">
+                                        <div class="col-3 m-auto">
+                                            <img src="../assets/support.svg" alt="support">
+                                        </div>
+                                        <div class="col-9 m-auto">
+                                            <p class="tx-white mg-b-10">Got questions? Talk to our
+                                                customer care agent</p>
+                                            <p class="mg-b-0"><a class="tx-white  support"
+                                                    href="tel:+234744959457">+234744959457</a></p>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </div><!-- container -->
+    </div><!-- slim-mainpanel -->
+
+    <!--<div class="slim-footer">
+        <div class="container">
+            <p>Copyright 2019 &copy; All Rights Reserved. NodCredit</p>
+            <p>Designed by: <a href="http://ifeanyiernest.com">Ifeanyi</a></p>
+        </div> container 
+    </div> slim-footer -->
+
+    <script src="../lib/jquery/js/jquery.js"></script>
+    <script src="../lib/popper.js/js/popper.js"></script>
+    <script src="../lib/bootstrap/js/bootstrap.js"></script>
+    <script src="../lib/jquery.cookie/js/jquery.cookie.js"></script>
+    <script src="../lib/chartist/js/chartist.js"></script>
+    <script src="../lib/d3/js/d3.js"></script>
+    <script src="../lib/rickshaw/js/rickshaw.min.js"></script>
+    <script src="../lib/jquery.sparkline.bower/js/jquery.sparkline.min.js"></script>
+
+    <script src="../js/ResizeSensor.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <script src="../js/dashboard.js"></script>
+    <script src="../js/slim.js"></script>
+</body>
+
+</html>
