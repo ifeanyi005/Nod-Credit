@@ -1,0 +1,714 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name=" View Loanport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content=" ">
+    <meta name="keywords" content="">
+    <!-- Favicon-->
+    <link rel="shortcut icon" href="../assets/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="../assets/favicon.ico" type="image/x-icon" />
+
+    <!-- Meta -->
+    <meta name="description" content="NodCredit Loan Dashboard">
+    <meta name="author" content="NodCredit">
+
+    <title>NodCredit Customer</title>
+
+    <!-- vendor css -->
+    <link href="../lib/font-awesome/css/font-awesome.css" rel="stylesheet">
+    <link href="../lib/Ionicons/css/ionicons.css" rel="stylesheet">
+    <link href="../lib/datatables/css/jquery.dataTables.css" rel="stylesheet">
+    <link href="../lib/select2/css/select2.min.css" rel="stylesheet">
+    <link href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css" rel="stylesheet">
+
+    <!-- Slim CSS -->
+    <link rel="stylesheet" href="../css/custom.css">
+    <link rel="stylesheet" href="../css/slim.css">
+
+</head>
+
+<body>
+    <div class="slim-header">
+        <div class="container">
+            <div class="slim-header-left">
+                <h2 class="nod-logo slim-logo"><a href="/customer-dashboard/index.html"><img
+                            src="../assets/logo-white.svg" alt="NodCredit Logo" /></a>
+                </h2>
+
+                <!-- <div class="search-box">
+          <input type="text" class="form-control" placeholder="Search">
+          <button class="btn btn-primary"><i class="fa fa-search"></i></button>
+        </div> -->
+            </div><!-- slim-header-left -->
+            <div class="slim-header-right">
+                <div class="dropdown dropdown-c">
+                    <a href="#" class="logged-user" data-toggle="dropdown">
+                        <span class="tx-white">Ifeanyi Umunnakwe</span>
+                        <i class="fa fa-angle-down tx-white"></i>
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-right">
+                        <nav class="nav">
+                            <a href="settings.html" class="nav-link"><i class="icon ion-ios-gear"></i> Account
+                                Settings</a>
+                            <a href="" class="nav-link"><i class="icon ion-ios-redo"></i> Sign Out</a>
+                        </nav>
+                    </div><!-- dropdown-menu -->
+                </div><!-- dropdown -->
+            </div><!-- header-right -->
+        </div><!-- container -->
+    </div><!-- slim-header -->
+
+    <div class="slim-navbar">
+        <div class="container">
+            <ul class="nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">
+                        <i class="icon ion-md-home"></i>
+                        <span>Dashboard</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="">
+                        <i class="icon ion-ios-checkmark-circle"></i>
+                        <span>Loan</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="investments.html">
+                        <i class="icon ion-ios-rocket"></i>
+                        <span>Investments</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="transactions.html">
+                        <i class="icon ion-ios-swap"></i>
+                        <span>Transactions</span>
+                    </a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="account.html">
+                        <i class="icon ion-ios-contacts"></i>
+                        <span>Accounts</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="settings.html">
+                        <i class="icon ion-ios-gear"></i>
+                        <span>Profile Settings</span>
+                    </a>
+                </li>
+
+            </ul>
+        </div><!-- container -->
+    </div><!-- slim-navbar -->
+
+    <div class="slim-mainpanel">
+        <div class="container mg-y-50">
+            <h3>Accounts</h3>
+            <div class="card-header settingstab">
+                <ul class="nav nav-tabs card-header-tabs">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#applications" data-toggle="tab">All Accounts</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#payments" data-toggle="tab">Blacklisted Accounts</a>
+                    </li>
+                </ul>
+            </div><!-- card-header -->
+
+            <div class="tab-content">
+                <div class="tab-pane active" id="applications">
+
+                    <div class="row mg-y-20">
+                        <div class="col-12 col-md-6  m-auto">
+                            <h4 class="tx-normal tx-18">4500 Customers</h4>
+                        </div>
+                        <div class="col-12 col-md-6">
+                            <div class="row table-nod">
+
+                                <div class="col-8">
+                                    <div class="search-box search-2">
+                                        <button class="btn btn-primary"><i class="fa fa-search"></i></button>
+                                        <input type="text" class="form-control" placeholder="Search">
+
+                                    </div><!-- search-box -->
+                                </div>
+                                <div class="col-4">
+                                    <select class="form-control select2" data-placeholder="Filter by: Type">
+                                        <option label="Filter by: Type"></option>
+                                        <option value="Completed Investments">Regular Customer</option>
+                                        <option value="Completed Investments">Investors</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="table-wrapper table-responsive">
+                        <table id="datatable2" class="table display responsive nowrap">
+                            <thead>
+                                <tr>
+                                    <th class="wd-15p">Name</th>
+                                    <th class="wd-25p">Email Address</th>
+                                    <th class="wd-10p">Account Type</th>
+                                    <th class="wd-10p">BVN</th>
+                                    <th class="wd-5p">Phone Number</th>
+                                    <th class="wd-10p"></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+
+                                <tr>
+                                    <td>Awaatif Al Sadek</td>
+                                    <td>obadafidii@gmail.com</td>
+                                    <td>Regular Customer</td>
+                                    <td>3423897643</td>
+                                    <td>09079734839</td>
+                                    <td>
+                                        <div class="dropdown dropdown-demo">
+                                            <a href="#" class="dd-link wd-100p" data-toggle="dropdown">
+                                                <div>
+                                                    <span>Action</span>
+                                                    <i class="fa fa-angle-down nodblue"></i>
+                                                </div>
+                                            </a>
+                                            <div class="dropdown-menu pd-5">
+                                                <nav class="nav">
+                                                    <a href="account-detail.html" class="nav-link">View Account</a>
+                                                    <a href="" class="nav-link">
+                                                        Change Password</a>
+                                                    <a href="" class="nav-link">
+                                                        Shadow Account</a>
+                                                    <a href="" class="nav-link">
+                                                        Blacklist</a>
+                                                </nav>
+                                            </div><!-- dropdown-menu -->
+                                        </div><!-- dropdown -->
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Awaatif Al Sadek</td>
+                                    <td>obadafidii@gmail.com</td>
+                                    <td>Investor</td>
+                                    <td>3423897643</td>
+                                    <td>09079734839</td>
+                                    <td>
+                                        <div class="dropdown dropdown-demo">
+                                            <a href="#" class="dd-link wd-100p" data-toggle="dropdown">
+                                                <div>
+                                                    <span>Action</span>
+                                                    <i class="fa fa-angle-down nodblue"></i>
+                                                </div>
+                                            </a>
+                                            <div class="dropdown-menu pd-5">
+                                                <nav class="nav">
+                                                    <a href="" class="nav-link">View Account</a>
+                                                    <a href="" class="nav-link">
+                                                        Change Password</a>
+                                                    <a href="" class="nav-link">
+                                                        Shadow Account</a>
+                                                    <a href="" class="nav-link">
+                                                        Blacklist</a>
+                                                </nav>
+                                            </div><!-- dropdown-menu -->
+                                        </div><!-- dropdown -->
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Awaatif Al Sadek</td>
+                                    <td>obadafidii@gmail.com</td>
+                                    <td>Regular Customer</td>
+                                    <td>3423897643</td>
+                                    <td>09079734839</td>
+                                    <td>
+                                        <div class="dropdown dropdown-demo">
+                                            <a href="#" class="dd-link wd-100p" data-toggle="dropdown">
+                                                <div>
+                                                    <span>Action</span>
+                                                    <i class="fa fa-angle-down nodblue"></i>
+                                                </div>
+                                            </a>
+                                            <div class="dropdown-menu pd-5">
+                                                <nav class="nav">
+                                                    <a href="" class="nav-link">View Account</a>
+                                                    <a href="" class="nav-link">
+                                                        Change Password</a>
+                                                    <a href="" class="nav-link">
+                                                        Shadow Account</a>
+                                                    <a href="" class="nav-link">
+                                                        Blacklist</a>
+                                                </nav>
+                                            </div><!-- dropdown-menu -->
+                                        </div><!-- dropdown -->
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Awaatif Al Sadek</td>
+                                    <td>obadafidii@gmail.com</td>
+                                    <td>Investor</td>
+                                    <td>3423897643</td>
+                                    <td>09079734839</td>
+                                    <td>
+                                        <div class="dropdown dropdown-demo">
+                                            <a href="#" class="dd-link wd-100p" data-toggle="dropdown">
+                                                <div>
+                                                    <span>Action</span>
+                                                    <i class="fa fa-angle-down nodblue"></i>
+                                                </div>
+                                            </a>
+                                            <div class="dropdown-menu pd-5">
+                                                <nav class="nav">
+                                                    <a href="" class="nav-link">View Account</a>
+                                                    <a href="" class="nav-link">
+                                                        Change Password</a>
+                                                    <a href="" class="nav-link">
+                                                        Shadow Account</a>
+                                                    <a href="" class="nav-link">
+                                                        Blacklist</a>
+                                                </nav>
+                                            </div><!-- dropdown-menu -->
+                                        </div><!-- dropdown -->
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Awaatif Al Sadek</td>
+                                    <td>obadafidii@gmail.com</td>
+                                    <td>Regular Customer</td>
+                                    <td>3423897643</td>
+                                    <td>09079734839</td>
+                                    <td>
+                                        <div class="dropdown dropdown-demo">
+                                            <a href="#" class="dd-link wd-100p" data-toggle="dropdown">
+                                                <div>
+                                                    <span>Action</span>
+                                                    <i class="fa fa-angle-down nodblue"></i>
+                                                </div>
+                                            </a>
+                                            <div class="dropdown-menu pd-5">
+                                                <nav class="nav">
+                                                    <a href="" class="nav-link">View Account</a>
+                                                    <a href="" class="nav-link">
+                                                        Change Password</a>
+                                                    <a href="" class="nav-link">
+                                                        Shadow Account</a>
+                                                    <a href="" class="nav-link">
+                                                        Blacklist</a>
+                                                </nav>
+                                            </div><!-- dropdown-menu -->
+                                        </div><!-- dropdown -->
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Awaatif Al Sadek</td>
+                                    <td>obadafidii@gmail.com</td>
+                                    <td>Investor</td>
+                                    <td>3423897643</td>
+                                    <td>09079734839</td>
+                                    <td>
+                                        <div class="dropdown dropdown-demo">
+                                            <a href="#" class="dd-link wd-100p" data-toggle="dropdown">
+                                                <div>
+                                                    <span>Action</span>
+                                                    <i class="fa fa-angle-down nodblue"></i>
+                                                </div>
+                                            </a>
+                                            <div class="dropdown-menu pd-5">
+                                                <nav class="nav">
+                                                    <a href="" class="nav-link">View Account</a>
+                                                    <a href="" class="nav-link">
+                                                        Change Password</a>
+                                                    <a href="" class="nav-link">
+                                                        Shadow Account</a>
+                                                    <a href="" class="nav-link">
+                                                        Blacklist</a>
+                                                </nav>
+                                            </div><!-- dropdown-menu -->
+                                        </div><!-- dropdown -->
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Awaatif Al Sadek</td>
+                                    <td>obadafidii@gmail.com</td>
+                                    <td>Regular Customer</td>
+                                    <td>3423897643</td>
+                                    <td>09079734839</td>
+                                    <td>
+                                        <div class="dropdown dropdown-demo">
+                                            <a href="#" class="dd-link wd-100p" data-toggle="dropdown">
+                                                <div>
+                                                    <span>Action</span>
+                                                    <i class="fa fa-angle-down nodblue"></i>
+                                                </div>
+                                            </a>
+                                            <div class="dropdown-menu pd-5">
+                                                <nav class="nav">
+                                                    <a href="" class="nav-link">View Account</a>
+                                                    <a href="" class="nav-link">
+                                                        Change Password</a>
+                                                    <a href="" class="nav-link">
+                                                        Shadow Account</a>
+                                                    <a href="" class="nav-link">
+                                                        Blacklist</a>
+                                                </nav>
+                                            </div><!-- dropdown-menu -->
+                                        </div><!-- dropdown -->
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Awaatif Al Sadek</td>
+                                    <td>obadafidii@gmail.com</td>
+                                    <td>Investor</td>
+                                    <td>3423897643</td>
+                                    <td>09079734839</td>
+                                    <td>
+                                        <div class="dropdown dropdown-demo">
+                                            <a href="#" class="dd-link wd-100p" data-toggle="dropdown">
+                                                <div>
+                                                    <span>Action</span>
+                                                    <i class="fa fa-angle-down nodblue"></i>
+                                                </div>
+                                            </a>
+                                            <div class="dropdown-menu pd-5">
+                                                <nav class="nav">
+                                                    <a href="" class="nav-link">View Account</a>
+                                                    <a href="" class="nav-link">
+                                                        Change Password</a>
+                                                    <a href="" class="nav-link">
+                                                        Shadow Account</a>
+                                                    <a href="" class="nav-link">
+                                                        Blacklist</a>
+                                                </nav>
+                                            </div><!-- dropdown-menu -->
+                                        </div><!-- dropdown -->
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Awaatif Al Sadek</td>
+                                    <td>obadafidii@gmail.com</td>
+                                    <td>Regular Customer</td>
+                                    <td>3423897643</td>
+                                    <td>09079734839</td>
+                                    <td>
+                                        <div class="dropdown dropdown-demo">
+                                            <a href="#" class="dd-link wd-100p" data-toggle="dropdown">
+                                                <div>
+                                                    <span>Action</span>
+                                                    <i class="fa fa-angle-down nodblue"></i>
+                                                </div>
+                                            </a>
+                                            <div class="dropdown-menu pd-5">
+                                                <nav class="nav">
+                                                    <a href="" class="nav-link">View Account</a>
+                                                    <a href="" class="nav-link">
+                                                        Change Password</a>
+                                                    <a href="" class="nav-link">
+                                                        Shadow Account</a>
+                                                    <a href="" class="nav-link">
+                                                        Blacklist</a>
+                                                </nav>
+                                            </div><!-- dropdown-menu -->
+                                        </div><!-- dropdown -->
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Awaatif Al Sadek</td>
+                                    <td>obadafidii@gmail.com</td>
+                                    <td>Investor</td>
+                                    <td>3423897643</td>
+                                    <td>09079734839</td>
+                                    <td>
+                                        <div class="dropdown dropdown-demo">
+                                            <a href="#" class="dd-link wd-100p" data-toggle="dropdown">
+                                                <div>
+                                                    <span>Action</span>
+                                                    <i class="fa fa-angle-down nodblue"></i>
+                                                </div>
+                                            </a>
+                                            <div class="dropdown-menu pd-5">
+                                                <nav class="nav">
+                                                    <a href="" class="nav-link">View Account</a>
+                                                    <a href="" class="nav-link">
+                                                        Change Password</a>
+                                                    <a href="" class="nav-link">
+                                                        Shadow Account</a>
+                                                    <a href="" class="nav-link">
+                                                        Blacklist</a>
+                                                </nav>
+                                            </div><!-- dropdown-menu -->
+                                        </div><!-- dropdown -->
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Awaatif Al Sadek</td>
+                                    <td>obadafidii@gmail.com</td>
+                                    <td>Regular Customer</td>
+                                    <td>3423897643</td>
+                                    <td>09079734839</td>
+                                    <td>
+                                        <div class="dropdown dropdown-demo">
+                                            <a href="#" class="dd-link wd-100p" data-toggle="dropdown">
+                                                <div>
+                                                    <span>Action</span>
+                                                    <i class="fa fa-angle-down nodblue"></i>
+                                                </div>
+                                            </a>
+                                            <div class="dropdown-menu pd-5">
+                                                <nav class="nav">
+                                                    <a href="" class="nav-link">View Account</a>
+                                                    <a href="" class="nav-link">
+                                                        Change Password</a>
+                                                    <a href="" class="nav-link">
+                                                        Shadow Account</a>
+                                                    <a href="" class="nav-link">
+                                                        Blacklist</a>
+                                                </nav>
+                                            </div><!-- dropdown-menu -->
+                                        </div><!-- dropdown -->
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Awaatif Al Sadek</td>
+                                    <td>obadafidii@gmail.com</td>
+                                    <td>Investor</td>
+                                    <td>3423897643</td>
+                                    <td>09079734839</td>
+                                    <td>
+                                        <div class="dropdown dropdown-demo">
+                                            <a href="#" class="dd-link wd-100p" data-toggle="dropdown">
+                                                <div>
+                                                    <span>Action</span>
+                                                    <i class="fa fa-angle-down nodblue"></i>
+                                                </div>
+                                            </a>
+                                            <div class="dropdown-menu pd-5">
+                                                <nav class="nav">
+                                                    <a href="" class="nav-link">View Account</a>
+                                                    <a href="" class="nav-link">
+                                                        Change Password</a>
+                                                    <a href="" class="nav-link">
+                                                        Shadow Account</a>
+                                                    <a href="" class="nav-link">
+                                                        Blacklist</a>
+                                                </nav>
+                                            </div><!-- dropdown-menu -->
+                                        </div><!-- dropdown -->
+                                    </td>
+                                </tr>
+
+
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+
+                <!-- end of loan application tab  -->
+                <div class="tab-pane" id="payments">
+
+
+
+                    <div class="row mg-y-20">
+                        <div class="col-12 col-md-6  m-auto">
+                            <h4 class="tx-normal tx-18">30 Blacklisted Accounts</h4>
+                        </div>
+                        <div class="col-12 col-md-6">
+                            <div class="row table-nod">
+
+                                <div class="col-8">
+                                    <div class="search-box search-2">
+                                        <button class="btn btn-primary"><i class="fa fa-search"></i></button>
+                                        <input type="text" class="form-control" placeholder="Search">
+
+                                    </div><!-- search-box -->
+                                </div>
+                                <div class="col-4">
+                                    <select class="form-control select2" data-placeholder="Filter by: Status">
+                                        <option label="Filter by: Status"></option>
+                                        <option value="Completed Investments">Pending</option>
+                                        <option value="Active Investments">Completed</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="table-wrapper table-responsive">
+                        <table id="datatable1" class="table display responsive wrap">
+                            <thead>
+                                <tr>
+                                    <th class="wd-20p">Name</th>
+                                    <th class="wd-15p">Email Address</th>
+                                    <th class="wd-15p">BVN</th>
+                                    <th class="wd-20p">Phone Number</th>
+                                    <th class="wd-30p">Reason for Ban</th>
+
+                                </tr>
+                            </thead>
+                            <tbody>
+
+                                <tr>
+                                    <td>Okemute Gabriel</td>
+                                    <td>okegabe@gmail.com</td>
+                                    <td>230203920</td>
+                                    <td>0705683739</td>
+                                    <td>Adding data information which were added by another userwhich were added by
+                                        another user</td>
+                                </tr>
+                                <tr>
+                                    <td>Okemute Gabriel</td>
+                                    <td>okegabe@gmail.com</td>
+                                    <td>230203920</td>
+                                    <td>0705683739</td>
+                                    <td>Adding data information which were added by another userwhich were added by
+                                        another user</td>
+                                </tr>
+                                <tr>
+                                    <td>Okemute Gabriel</td>
+                                    <td>okegabe@gmail.com</td>
+                                    <td>230203920</td>
+                                    <td>0705683739</td>
+                                    <td>Adding data information which were added by another userwhich were added by
+                                        another user</td>
+                                </tr>
+                                <tr>
+                                    <td>Okemute Gabriel</td>
+                                    <td>okegabe@gmail.com</td>
+                                    <td>230203920</td>
+                                    <td>0705683739</td>
+                                    <td>Adding data information which were added by another userwhich were added by
+                                        another user</td>
+                                </tr>
+                                <tr>
+                                    <td>Okemute Gabriel</td>
+                                    <td>okegabe@gmail.com</td>
+                                    <td>230203920</td>
+                                    <td>0705683739</td>
+                                    <td>Adding data information which were added by another userwhich were added by
+                                        another user</td>
+                                </tr>
+                                <tr>
+                                    <td>Okemute Gabriel</td>
+                                    <td>okegabe@gmail.com</td>
+                                    <td>230203920</td>
+                                    <td>0705683739</td>
+                                    <td>Adding data information which were added by another userwhich were added by
+                                        another user</td>
+                                </tr>
+                                <tr>
+                                    <td>Okemute Gabriel</td>
+                                    <td>okegabe@gmail.com</td>
+                                    <td>230203920</td>
+                                    <td>0705683739</td>
+                                    <td>Adding data information which were added by another userwhich were added by
+                                        another user</td>
+                                </tr>
+                                <tr>
+                                    <td>Okemute Gabriel</td>
+                                    <td>okegabe@gmail.com</td>
+                                    <td>230203920</td>
+                                    <td>0705683739</td>
+                                    <td>Adding data information which were added by another userwhich were added by
+                                        another user</td>
+                                </tr>
+                                <tr>
+                                    <td>Okemute Gabriel</td>
+                                    <td>okegabe@gmail.com</td>
+                                    <td>230203920</td>
+                                    <td>0705683739</td>
+                                    <td>Adding data information which were added by another userwhich were added by
+                                        another user</td>
+                                </tr>
+                                <tr>
+                                    <td>Okemute Gabriel</td>
+                                    <td>okegabe@gmail.com</td>
+                                    <td>230203920</td>
+                                    <td>0705683739</td>
+                                    <td>Adding data information which were added by another userwhich were added by
+                                        another user</td>
+                                </tr>
+                                <tr>
+                                    <td>Okemute Gabriel</td>
+                                    <td>okegabe@gmail.com</td>
+                                    <td>230203920</td>
+                                    <td>0705683739</td>
+                                    <td>Adding data information which were added by another userwhich were added by
+                                        another user</td>
+                                </tr>
+                                <tr>
+                                    <td>Okemute Gabriel</td>
+                                    <td>okegabe@gmail.com</td>
+                                    <td>230203920</td>
+                                    <td>0705683739</td>
+                                    <td>Adding data information which were added by another userwhich were added by
+                                        another user</td>
+                                </tr>
+
+                            </tbody>
+                        </table>
+                    </div>
+
+
+                </div>
+
+            </div>
+
+
+
+
+
+        </div><!-- container -->
+    </div><!-- slim-mainpanel -->
+
+    <!--<div class="slim-footer">
+        <div class="container">
+            <p>Copyright 2019 &copy; All Rights Reserved. NodCredit</p>
+            <p>Designed by: <a href="http://ifeanyiernest.com">Ifeanyi</a></p>
+        </div> container 
+    </div> slim-footer -->
+
+    <script src="../lib/jquery/js/jquery.js"></script>
+    <script src="../lib/popper.js/js/popper.js"></script>
+    <script src="../lib/bootstrap/js/bootstrap.js"></script>
+    <script src="../lib/jquery.cookie/js/jquery.cookie.js"></script>
+    <script src="../lib/datatables/js/jquery.dataTables.js"></script>
+    <!-- <script src="../lib/datatables-responsive/js/dataTables.responsive.js"></script> -->
+    <script src="../lib/select2/js/select2.min.js"></script>
+
+    <script src="../js/slim.js"></script>
+    <script>
+        $(function () {
+            'use strict';
+
+            $('#datatable1').DataTable({
+                responsive: true,
+                language: {
+                    searchPlaceholder: 'Search...',
+                    sSearch: '',
+                    lengthMenu: '_MENU_ items/page',
+                }
+            });
+
+            $('#datatable2').DataTable({
+                bLengthChange: false,
+                searching: false,
+                responsive: true
+            });
+
+            // Select2
+            $('.dataTables_length select').select2({
+                minimumResultsForSearch: Infinity
+            });
+
+        });
+    </script>
+</body>
+
+</html>

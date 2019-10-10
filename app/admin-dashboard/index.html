@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content=" ">
+    <meta name="keywords" content="">
+    <!-- Favicon-->
+    <link rel="shortcut icon" href="../assets/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="../assets/favicon.ico" type="image/x-icon" />
+
+    <!-- Meta -->
+    <meta name="description" content="NodCredit Loan Dashboard">
+    <meta name="author" content="NodCredit">
+
+    <title>NodCredit Customer</title>
+
+    <!-- vendor css -->
+    <link href="../lib/font-awesome/css/font-awesome.css" rel="stylesheet">
+    <link href="../lib/Ionicons/css/ionicons.css" rel="stylesheet">
+    <!-- <link href="../lib/chartist/css/chartist.css" rel="stylesheet"> -->
+    <link href="../lib/rickshaw/css/rickshaw.min.css" rel="stylesheet">
+    <link href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css" rel="stylesheet">
+    <link href="../lib/morris.js/css/morris.css" rel="stylesheet">
+
+    <!-- Slim CSS -->
+    <link rel="stylesheet" href="../css/custom.css">
+    <link rel="stylesheet" href="../css/slim.css">
+
+</head>
+
+<body>
+    <div class="slim-header">
+        <div class="container">
+            <div class="slim-header-left">
+                <h2 class="nod-logo slim-logo"><a href="/customer-dashboard/index.html"><img
+                            src="../assets/logo-white.svg" alt="NodCredit Logo" /></a>
+                </h2>
+
+                <!-- <div class="search-box">
+          <input type="text" class="form-control" placeholder="Search">
+          <button class="btn btn-primary"><i class="fa fa-search"></i></button>
+        </div> -->
+            </div><!-- slim-header-left -->
+            <div class="slim-header-right">
+                <div class="dropdown dropdown-c">
+                    <a href="#" class="logged-user" data-toggle="dropdown">
+                        <span class="tx-white">Ifeanyi Umunnakwe</span>
+                        <i class="fa fa-angle-down tx-white"></i>
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-right">
+                        <nav class="nav">
+                            <a href="settings.html" class="nav-link"><i class="icon ion-ios-gear"></i> Account
+                                Settings</a>
+                            <a href="" class="nav-link"><i class="icon ion-ios-redo"></i> Sign Out</a>
+                        </nav>
+                    </div><!-- dropdown-menu -->
+                </div><!-- dropdown -->
+            </div><!-- header-right -->
+        </div><!-- container -->
+    </div><!-- slim-header -->
+
+    <div class="slim-navbar">
+        <div class="container">
+            <ul class="nav">
+                <li class="nav-item active">
+                    <a class="nav-link" href="index.html">
+                        <i class="icon ion-md-home"></i>
+                        <span>Dashboard</span>
+                    </a>
+                </li>
+                <li class="nav-item ">
+                    <a class="nav-link" href="loans.html">
+                        <i class="icon ion-ios-checkmark-circle"></i>
+                        <span>Loan</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="investments.html">
+                        <i class="icon ion-ios-rocket"></i>
+                        <span>Investments</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="transactions.html">
+                        <i class="icon ion-ios-swap"></i>
+                        <span>Transactions</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="account.html">
+                        <i class="icon ion-ios-contacts"></i>
+                        <span>Accounts</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="settings.html">
+                        <i class="icon ion-ios-gear"></i>
+                        <span>Profile Settings</span>
+                    </a>
+                </li>
+
+            </ul>
+        </div><!-- container -->
+    </div><!-- slim-navbar -->
+
+    <div class="slim-mainpanel">
+        <div class="container mg-y-50">
+
+            <div class="row">
+                <!-- form -->
+                <div class="col-lg-3 ">
+                    <div class="card card-bg nod-card h-100 m-auto card-shadow mg-t-30  dash-content">
+                        <div class="box-info pd-15 mg-t-5  loan-amount">
+                            <label class="dark-grey">Loan</label>
+                            <h2>20</h2>
+                            <div class="row">
+                                <div class="col-6"><label class="dark-grey text-capitalize">Active: <span
+                                            class="tx-medium">12</span> </label></div>
+                                <div class="col-6"><label class="dark-grey text-capitalize">Completed: <span
+                                            class="tx-medium">60</span> </label></div>
+                            </div>
+
+                        </div><!-- dash-content -->
+                    </div>
+                </div>
+                <div class="col-lg-3 card-30">
+                    <div class="card card-bg nod-card h-100 m-auto card-shadow mg-t-30  dash-content">
+                        <div class="box-info pd-15 mg-t-5 loan-amount">
+                            <label class="dark-grey">Total Loan disbursed</label>
+                            <h2> <sup>₦</sup> 6,037,000</h2>
+                            <div class="row">
+                                <div class="col-6"><label class="dark-grey text-capitalize">Recieved: <span
+                                            class="tx-medium">₦4,000,000</span> </label></div>
+                                <div class="col-6"><label class="dark-grey text-capitalize">Pending: <span
+                                            class="tx-medium">₦2,000,000</span> </label></div>
+                            </div>
+
+                        </div><!-- dash-content -->
+                    </div>
+                </div>
+                <div class="col-lg-3 card-30">
+                    <div class="card card-bg nod-card h-100 m-auto card-shadow mg-t-30  dash-content">
+                        <div class="box-info pd-15 mg-t-5 loan-amount">
+                            <label class="dark-grey">Investments</label>
+                            <h2>18</h2>
+                            <div class="row">
+                                <div class="col-6"><label class="dark-grey text-capitalize">Active: <span
+                                            class="tx-medium">12</span> </label></div>
+                                <div class="col-6"><label class="dark-grey text-capitalize">Complete: <span
+                                            class="tx-medium">6</span> </label></div>
+                            </div>
+
+                        </div><!-- dash-content -->
+                    </div>
+                </div>
+                <div class="col-lg-3 card-30">
+                    <div class="card card-bg nod-card h-100 m-auto card-shadow  dash-content">
+                        <div class="box-info pd-15 mg-t-5  loan-amount">
+                            <label class="dark-grey">Total investment</label>
+                            <h2 class=""> <sup>₦</sup> 60,037,000</h2>
+                            <label class="dark-grey text-capitalize">Total Returns: <span
+                                    class="tx-medium">N4,000,000</span> </label>
+
+                        </div><!-- dash-content -->
+                    </div>
+                </div>
+
+            </div>
+
+
+            <div class="row mg-t-30">
+                <!-- form -->
+                <div class="col-lg-9">
+                    <div class="card nod-card card-shadow dash-content">
+                        <div class="nod-header-p-2">Loan disbursed Vs Repayment</div>
+                        <hr>
+                        <div class="col-xl-12 mg-t-20 mg-xl-t-0">
+                            <div class=" ">
+                                <!-- <div id="chartBar2" class="slim-chartist ht-200 ht-sm-300"></div> -->
+                                <div id="legend"></div>
+                                <div id="morrisBar1" class="ht-200 ht-sm-300"></div>
+
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 card-30">
+                    <div class="card nod-card h-100 card-shadow  dash-content">
+                        <div class="nod-header-p-2">User Snapshot </div>
+
+                        <hr>
+
+                        <div class="pd-y-20">
+                            <div id="morrisDonut1" class="ht-200 ht-sm-250"></div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+
+            <div class="row mg-t-30">
+                <!-- form -->
+                <div class="col-lg-6">
+                    <div class="card h-100 nod-card card-shadow dash-content">
+                        <div class="nod-header-p-2">New Loan Request</div>
+                        <hr class="mg-0-force">
+
+
+                        <div class="table-responsive ">
+                            <table class="table table-hover mg-b-0">
+                                <thead class="pd-l-25">
+                                    <tr>
+                                        <th>Name</th>
+                                        <th>Purpose</th>
+                                        <th>Amount</th>
+                                        <th>Action</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="pd-l-25">
+                                    <tr>
+                                        <td>Emmanuel Afolabi</td>
+                                        <td>Others</td>
+                                        <td>₦ 5,000.00</td>
+                                        <td> <a href="loaldetail.html" class="btn btn-table">
+                                                View Loan
+                                            </a></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Emmanuel Afolabi</td>
+                                        <td>Others</td>
+                                        <td>₦ 5,000.00</td>
+                                        <td> <a href="loaldetail.html" class="btn btn-table">
+                                                View Loan
+                                            </a></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Emmanuel Afolabi</td>
+                                        <td>Others</td>
+                                        <td>₦ 5,000.00</td>
+                                        <td> <a href="loaldetail.html" class="btn btn-table">
+                                                View Loan
+                                            </a></td>
+                                    </tr>
+
+                                </tbody>
+                            </table>
+                        </div><!-- table-responsive -->
+                    </div>
+                </div>
+                <div class="col-lg-6 card-30">
+                    <div class="card h-100 nod-card card-shadow dash-content">
+                        <div class="nod-header-p-2">Defaulters</div>
+                        <hr class="mg-0-force">
+
+
+                        <div class="table-responsive ">
+                            <table class="table table-hover mg-b-0">
+                                <thead class="pd-l-25">
+                                    <tr>
+                                        <th>Name</th>
+                                        <th>Amount</th>
+                                        <th>No. of Days Left</th>
+                                        <!-- <th>Action</th> -->
+                                    </tr>
+                                </thead>
+                                <tbody class="pd-l-25">
+                                    <tr>
+                                        <td>Emmanuel Afolabi</td>
+                                        <td>₦ 5,000.00</td>
+                                        <td>5</td>
+                                        <!-- <td></td> -->
+                                    </tr>
+                                    <tr>
+                                        <td>Emmanuel Afolabi</td>
+                                        <td>₦ 5,000.00</td>
+                                        <td>5</td>
+                                        <!-- <td></td> -->
+                                    </tr>
+                                    <tr>
+                                        <td>Emmanuel Afolabi</td>
+                                        <td>₦ 5,000.00</td>
+                                        <td>5</td>
+                                        <!-- <td></td> -->
+                                    </tr>
+                                    <tr>
+                                        <td>Emmanuel Afolabi</td>
+                                        <td>₦ 5,000.00</td>
+                                        <td>5</td>
+                                        <!-- <td></td> -->
+                                    </tr>
+
+                                </tbody>
+                            </table>
+                        </div><!-- table-responsive -->
+                    </div>
+                </div>
+            </div>
+
+
+
+        </div><!-- container -->
+    </div><!-- slim-mainpanel -->
+
+    <!--<div class="slim-footer">
+        <div class="container">
+            <p>Copyright 2019 &copy; All Rights Reserved. NodCredit</p>
+            <p>Designed by: <a href="http://ifeanyiernest.com">Ifeanyi</a></p>
+        </div> container 
+    </div> slim-footer -->
+
+    <script src="../lib/jquery/js/jquery.js"></script>
+    <script src="../lib/popper.js/js/popper.js"></script>
+    <script src="../lib/bootstrap/js/bootstrap.js"></script>
+    <script src="../lib/jquery.cookie/js/jquery.cookie.js"></script>
+    <!-- <script src="../lib/chartist/js/chartist.js"></script> -->
+    <script src="../js/slim.js"></script>
+    <!-- <script src="../js/ResizeSensor.js"></script> -->
+    <!-- <script src="../js/chart.chartist.js"></script> -->
+    <script src="../lib/morris.js/js/morris.js"></script>
+    <script src="../lib/raphael/js/raphael.min.js"></script>
+    <script src="../js/chart.morris.js"></script>
+
+</body>
+
+</html>

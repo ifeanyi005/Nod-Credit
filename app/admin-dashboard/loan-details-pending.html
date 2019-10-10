@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name=" View Loanport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content=" ">
+    <meta name="keywords" content="">
+    <!-- Favicon-->
+    <link rel="shortcut icon" href="../assets/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="../assets/favicon.ico" type="image/x-icon" />
+
+    <!-- Meta -->
+    <meta name="description" content="NodCredit Loan Dashboard">
+    <meta name="author" content="NodCredit">
+
+    <title>NodCredit Customer</title>
+
+    <!-- vendor css -->
+    <link href="../lib/font-awesome/css/font-awesome.css" rel="stylesheet">
+    <link href="../lib/Ionicons/css/ionicons.css" rel="stylesheet">
+    <link href="../lib/datatables/css/jquery.dataTables.css" rel="stylesheet">
+    <link href="../lib/select2/css/select2.min.css" rel="stylesheet">
+    <link href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css" rel="stylesheet">
+
+    <!-- Slim CSS -->
+    <link rel="stylesheet" href="../css/custom.css">
+    <link rel="stylesheet" href="../css/slim.css">
+
+</head>
+
+<body>
+    <div class="slim-header">
+        <div class="container">
+            <div class="slim-header-left">
+                <h2 class="nod-logo slim-logo"><a href="/customer-dashboard/index.html"><img
+                            src="../assets/logo-white.svg" alt="NodCredit Logo" /></a>
+                </h2>
+
+                <!-- <div class="search-box">
+          <input type="text" class="form-control" placeholder="Search">
+          <button class="btn btn-primary"><i class="fa fa-search"></i></button>
+        </div> -->
+            </div><!-- slim-header-left -->
+            <div class="slim-header-right">
+                <div class="dropdown dropdown-c">
+                    <a href="#" class="logged-user" data-toggle="dropdown">
+                        <span class="tx-white">Ifeanyi Umunnakwe</span>
+                        <i class="fa fa-angle-down tx-white"></i>
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-right">
+                        <nav class="nav">
+                            <a href="settings.html" class="nav-link"><i class="icon ion-ios-gear"></i> Account
+                                Settings</a>
+                            <a href="" class="nav-link"><i class="icon ion-ios-redo"></i> Sign Out</a>
+                        </nav>
+                    </div><!-- dropdown-menu -->
+                </div><!-- dropdown -->
+            </div><!-- header-right -->
+        </div><!-- container -->
+    </div><!-- slim-header -->
+
+    <div class="slim-navbar">
+        <div class="container">
+            <ul class="nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">
+                        <i class="icon ion-md-home"></i>
+                        <span>Dashboard</span>
+                    </a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="loans.html">
+                        <i class="icon ion-ios-checkmark-circle"></i>
+                        <span>Loan</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="investments.html">
+                        <i class="icon ion-ios-rocket"></i>
+                        <span>Investments</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="transactions.html">
+                        <i class="icon ion-ios-swap"></i>
+                        <span>Transactions</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="account.html">
+                        <i class="icon ion-ios-contacts"></i>
+                        <span>Accounts</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="settings.html">
+                        <i class="icon ion-ios-gear"></i>
+                        <span>Profile Settings</span>
+                    </a>
+                </li>
+
+            </ul>
+        </div><!-- container -->
+    </div><!-- slim-navbar -->
+
+    <div class="slim-mainpanel">
+        <div class="container mg-y-50">
+            <div class="row">
+                <div class="col-sm-6 m-auto">
+                    <a class="dark-two" href="loans.html">← Go back to Loans</a>
+                    <h3 class="pd-t-10">Gabriel Moreira</h3>
+                </div>
+                <div class="col-sm-6 m-auto loanstatus">
+                    <div class="pd-r-10">Date Applied: Apr 18 , 2019 at 10:00 AM </div>
+                    <div class="pending">Pending</div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-4 m-auto">
+                    <div class="card nod-card  card-shadow mg-t-30 pd-30 dash-content">
+                        <p class="tx-16">Change Status</p>
+                        <div class="row">
+                            <div class="col-6">
+                                <select class="form-control select2" data-placeholder="Change Loan Status">
+                                    <option label="Change Loan Status"></option>
+                                    <option value="Completed Investments">Process</option>
+                                    <option value="Active Investments">Approved</option>
+                                    <option value="Active Investments">Rejected</option>
+                                    <option value="Active Investments">Completed</option>
+                                    <option value="Active Investments">Unknown</option>
+                                </select>
+                            </div>
+                            <div class="col-6">
+                                <a href="" class="btn btn-disabled margin-top2">Pay Out</a>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-lg-4 m-auto">
+                    <div class="card nod-card card-shadow mg-t-30 pd-30 dash-content">
+                        <p class="tx-16">Total Loan Balance</p>
+                        <h2 class="nodblue">₦49,000</h2>
+                    </div>
+                </div>
+                <div class="col-lg-4 m-auto">
+                    <div class="card nod-card  card-shadow mg-t-30 pd-30 dash-content">
+                        <p class="tx-16">18 Apr, 2019 - 18 Jun, 2019</p>
+                        <h2>1 Month</h2>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="row mg-b-50">
+                <!-- form -->
+                <div class="col-md-5">
+                    <div class="card nod-card h-100 card-shadow mg-t-30  dash-content">
+                        <div class="nod-header-p-2 pd-x-20">Loan Information
+                        </div>
+                        <hr class="mg-0">
+                        <div class="pd-x-20">
+                            <div class=" applydetails">
+                                <div class="d-inline-flex name">Loan Amount</div>
+                                <div class="d-inline-flex float-right detail ">₦12,000</div>
+                            </div>
+                            <div class="applydetails">
+                                <div class="d-inline-flex name">Loan Purpose</div>
+                                <div class="d-inline-flex float-right detail">House Repairs</div>
+                            </div>
+                            <div class="applydetails">
+                                <div class="d-inline-flex name">Loan Tenor</div>
+                                <div class="d-inline-flex float-right detail ">1 Month</div>
+                            </div>
+                            <div class="applydetails">
+                                <div class="d-inline-flex name">Interest</div>
+                                <div class="d-inline-flex float-right  detail">₦3,000 (5%)</div>
+                            </div>
+                            <div class="applydetails total">
+                                <div class="d-inline-flex name">Total</div>
+                                <div class="d-inline-flex float-right detail">₦15,000</div>
+                            </div>
+                            <div class="mg-t-20">
+                                <div class="d-inline-flex pdf pd-r-10"><img src="../assets/pdf.svg" alt="" /></div>
+                                <div class="d-inline-flex documentname">
+                                    <p>GTbank-Ifeanyi_2019_14…pdf <span class="d-block">2MB</span></p>
+                                </div>
+                                <div class="d-inline-flex close  tx-14 tx-normal nodblue  pd-t-5">View Document
+                                </div>
+                            </div>
+
+                            <div>
+                                <div class="d-inline-flex pdf pd-r-10"><img src="../assets/jpg.svg" alt="" /></div>
+                                <div class="d-inline-flex documentname">
+                                    <p>Office_ID.jpg <span class="d-block">1.2MB</span></p>
+                                </div>
+                                <div class="d-inline-flex close tx-14 tx-normal nodblue pd-t-5">View Document
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-7">
+                    <div class="card nod-card h-100 card-shadow mg-t-30 dash-content">
+                        <div class="nod-header-p-2">Transaction Activities</div>
+                        <hr class="mg-0-force">
+
+
+                        <div class="table-responsive ">
+                            <table class="table table-hover mg-b-0">
+                                <thead class="pd-l-25">
+                                    <tr>
+                                        <th>Date</th>
+                                        <th>Description</th>
+                                        <th>Amount Paid</th>
+                                        <th>Loan Balance</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="pd-l-25">
+                                    <tr>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+
+                                </tbody>
+                            </table>
+                        </div><!-- table-responsive -->
+                        <div class="pd-x-25">No transactions yet</div>
+                    </div>
+                </div>
+            </div>
+
+
+
+        </div><!-- container -->
+    </div><!-- slim-mainpanel -->
+
+    <!--<div class="slim-footer">
+        <div class="container">
+            <p>Copyright 2019 &copy; All Rights Reserved. NodCredit</p>
+            <p>Designed by: <a href="http://ifeanyiernest.com">Ifeanyi</a></p>
+        </div> container 
+    </div> slim-footer -->
+
+    <script src="../lib/jquery/js/jquery.js"></script>
+    <script src="../lib/popper.js/js/popper.js"></script>
+    <script src="../lib/bootstrap/js/bootstrap.js"></script>
+    <script src="../lib/jquery.cookie/js/jquery.cookie.js"></script>
+    <script src="../lib/datatables/js/jquery.dataTables.js"></script>
+    <!-- <script src="../lib/datatables-responsive/js/dataTables.responsive.js"></script> -->
+    <script src="../lib/select2/js/select2.min.js"></script>
+
+    <script src="../js/slim.js"></script>
+
+</body>
+
+</html>

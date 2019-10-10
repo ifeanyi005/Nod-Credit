@@ -66,27 +66,38 @@
     <div class="slim-navbar">
         <div class="container">
             <ul class="nav">
-                <li class="nav-item">
+                <li class="nav-item active">
                     <a class="nav-link" href="index.html">
                         <i class="icon ion-md-home"></i>
                         <span>Dashboard</span>
                     </a>
                 </li>
-                <li class="nav-item active">
-                    <a class="nav-link" href="invest.html">
-
-                        <i class="icon ion-ios-rocket"></i>
-                        <span>Invest</span>
+                <li class="nav-item ">
+                    <a class="nav-link" href="loans.html">
+                        <i class="icon ion-ios-checkmark-circle"></i>
+                        <span>Loan</span>
                     </a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="investments.html">
-                        <i class="icon ion-ios-list"></i>
-                        <span>My Investments</span>
+                        <i class="icon ion-ios-rocket"></i>
+                        <span>Investments</span>
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="">
+                    <a class="nav-link" href="transactions.html">
+                        <i class="icon ion-ios-swap"></i>
+                        <span>Transactions</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="account.html">
+                        <i class="icon ion-ios-contacts"></i>
+                        <span>Accounts</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="settings.html">
                         <i class="icon ion-ios-gear"></i>
                         <span>Profile Settings</span>
                     </a>
@@ -102,8 +113,8 @@
             <div class="flexbox-centering mg-t-50">
                 <div class="child text-center">
                     <div>
-                        <h3>Calculate Investment Plan</h3>
-                        <p>Complete the form below to apply to make <br />an investment</p>
+                        <h3>Review your investment</h3>
+                        <p>Pleased to confirm your investment <br>investment details</p>
                         <div class="segment-contents invest">
                             <div class="segment-bg ">
                                 <a href="">
@@ -112,7 +123,7 @@
                             </div>
                             <div class="segment-bg">
                                 <a href="">
-                                    <div class="segment-inactive"></div>
+                                    <div class="segment-active"></div>
                                 </a>
                             </div>
                             <div class="segment-bg">
@@ -133,57 +144,37 @@
                         <div class="row">
                             <div class="col-lg-6">
 
-                                <div class="form-layout">
+                                <p class="tx-normal">Please review your details below, then click ‘Apply’ to proceed
+                                    with the loan application.</p>
 
-                                    <div class="col-lg-12">
-                                        <div class="form-group">
-                                            <label class="form-control-label">Investment Name</label>
-                                            <input class="form-control" type="text" name="firstname"
-                                                placeholder="E.g My First Investment" />
-
-                                        </div>
-                                        <div class="form-group">
-                                            <label class="form-control-label">Select Investor</label>
-                                            <input class="form-control" type="text" name="firstname"
-                                                placeholder="E.g My First Investment" />
-
-                                        </div>
-                                        <div class="form-group">
-                                            <label class="form-control-label">Investment Amount</label>
-                                            <input class="form-control" type="text" name="firstname"
-                                                placeholder="500,000" />
-
-                                        </div>
-                                        <div class="selector">
-                                            <label class="form-control-label tx-medium">Select duration/amount
-                                            </label>
-                                            <p class="tx-12 mg-b-15 ">Please how long would you like your investment to
-                                                run?
-                                            </p>
-                                            <div class="form-check form-check-inline mg-b-15 nod-radio">
-                                                <label class="rdiobox">
-                                                    <input class="form-check-input" name="rdio" type="radio">
-                                                    <span>3 months</span>
-                                                </label>
-                                            </div>
-                                            <div class="form-check form-check-inline nod-radio">
-                                                <label class="rdiobox">
-                                                    <input class="form-check-input" name="rdio" type="radio">
-                                                    <span>6 months</span>
-                                                </label>
-                                            </div>
-                                            <div class="form-check form-check-inline nod-radio">
-                                                <label class="rdiobox">
-                                                    <input class="form-check-input" name="rdio" type="radio">
-                                                    <span>12 months</span>
-                                                </label>
-                                            </div>
-                                        </div>
-
-                                    </div>
-
+                                <div class="applydetails">
+                                    <div class="d-inline-flex name">Investment Name</div>
+                                    <div class="d-inline-flex float-right detail ">My First Investment</div>
                                 </div>
-
+                                <div class="applydetails">
+                                    <div class="d-inline-flex name">Investor Name</div>
+                                    <div class="d-inline-flex float-right detail ">Joy Olaoluwa</div>
+                                </div>
+                                <div class="applydetails">
+                                    <div class="d-inline-flex name">Investment AMount</div>
+                                    <div class="d-inline-flex float-right detail">₦500,000</div>
+                                </div>
+                                <div class="applydetails">
+                                    <div class="d-inline-flex name">Duration</div>
+                                    <div class="d-inline-flex float-right detail ">12 Months</div>
+                                </div>
+                                <div class="applydetails">
+                                    <div class="d-inline-flex name">Maturity Date</div>
+                                    <div class="d-inline-flex float-right  detail">Nov. 1st 2020</div>
+                                </div>
+                                <div class="applydetails ">
+                                    <div class="d-inline-flex name">Interest</div>
+                                    <div class="d-inline-flex float-right detail">₦150,000 (30%)</div>
+                                </div>
+                                <div class="applydetails total borderless-bottom ">
+                                    <div class="d-inline-flex name">Total</div>
+                                    <div class="d-inline-flex float-right detail">₦650,000</div>
+                                </div>
 
                             </div>
 
@@ -192,7 +183,8 @@
                                 <div class="card loaninfo-box nod-card  mg-t-30 pd-20 dash-content">
                                     <p class="dark-two"><img class="pd-r-5 " src="../assets/help.svg" alt=""> <span
                                             class="dark-two tx-medium tx-16 mg-t-5">Help Message</span> </p>
-                                    <p class="tx-12">You can chose the preset investment durations. </p>
+                                    <p class="tx-12">Premature liquidation of the investment will attract a penalty fee
+                                        of 50% on the accrued interet.</p>
 
                                 </div>
                             </div>
@@ -201,12 +193,16 @@
 
                     </div>
                     <div class="text-center mg-t-30">
-                        <a href="invest-2.html" class="btn btn-main">Continue</a>
+                        <div class="d-inline-flex mg-r-30"><a href="invest.html" class="dark-two">← Go back</a></div>
+                        <div class="d-inline-flex"><a href="investsuccess.html"
+                                class="btn btn-primary btn-block btn-main">Continue</a>
+                        </div>
                     </div>
                 </div>
 
 
             </div><!-- form -->
+
 
 
         </div><!-- container -->

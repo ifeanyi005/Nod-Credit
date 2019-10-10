@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content=" ">
+    <meta name="keywords" content="">
+    <!-- Favicon-->
+    <link rel="shortcut icon" href="../assets/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="../assets/favicon.ico" type="image/x-icon" />
+
+    <!-- Meta -->
+    <meta name="description" content="NodCredit Loan Dashboard">
+    <meta name="author" content="NodCredit">
+
+    <title>NodCredit Customer</title>
+
+    <!-- vendor css -->
+    <link href="../lib/font-awesome/css/font-awesome.css" rel="stylesheet">
+    <link href="../lib/Ionicons/css/ionicons.css" rel="stylesheet">
+    <link href="../lib/chartist/css/chartist.css" rel="stylesheet">
+    <link href="../lib/rickshaw/css/rickshaw.min.css" rel="stylesheet">
+    <link href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css" rel="stylesheet">
+
+    <!-- Slim CSS -->
+    <link rel="stylesheet" href="../css/custom.css">
+    <link rel="stylesheet" href="../css/slim.css">
+
+</head>
+
+<body>
+    <div class="slim-header">
+        <div class="container">
+            <div class="slim-header-left">
+                <h2 class="nod-logo slim-logo"><a href="/customer-dashboard/index.html"><img
+                            src="../assets/logo-white.svg" alt="NodCredit Logo" /></a>
+                </h2>
+
+                <!-- <div class="search-box">
+          <input type="text" class="form-control" placeholder="Search">
+          <button class="btn btn-primary"><i class="fa fa-search"></i></button>
+        </div> -->
+            </div><!-- slim-header-left -->
+            <div class="slim-header-right">
+                <div class="dropdown dropdown-c">
+                    <a href="#" class="logged-user" data-toggle="dropdown">
+                        <span class="tx-white">Ifeanyi Umunnakwe</span>
+                        <i class="fa fa-angle-down tx-white"></i>
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-right">
+                        <nav class="nav">
+                            <a href="settings.html" class="nav-link"><i class="icon ion-ios-gear"></i> Account
+                                Settings</a>
+                            <a href="" class="nav-link"><i class="icon ion-ios-redo"></i> Sign Out</a>
+                        </nav>
+                    </div><!-- dropdown-menu -->
+                </div><!-- dropdown -->
+            </div><!-- header-right -->
+        </div><!-- container -->
+    </div><!-- slim-header -->
+
+    <div class="slim-navbar">
+        <div class="container">
+            <ul class="nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">
+                        <i class="icon ion-md-home"></i>
+                        <span>Dashboard</span>
+                    </a>
+                </li>
+                <li class="nav-item ">
+                    <a class="nav-link" href="loans.html">
+                        <i class="icon ion-ios-checkmark-circle"></i>
+                        <span>Loan</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="investments.html">
+                        <i class="icon ion-ios-rocket"></i>
+                        <span>Investments</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="transactions.html">
+                        <i class="icon ion-ios-swap"></i>
+                        <span>Transactions</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="account.html">
+                        <i class="icon ion-ios-contacts"></i>
+                        <span>Accounts</span>
+                    </a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="settings.html">
+                        <i class="icon ion-ios-gear"></i>
+                        <span>Profile Settings</span>
+                    </a>
+                </li>
+
+            </ul>
+        </div><!-- container -->
+    </div><!-- slim-navbar -->
+
+    <div class="slim-mainpanel">
+        <div class="container mg-y-50">
+
+
+            <h3 class="pd-t-10">Settings</h3>
+            <div class="card-header settingstab">
+                <ul class="nav nav-tabs card-header-tabs">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#general" data-toggle="tab">General Settings</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#loan" data-toggle="tab">Loan Range</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#score" data-toggle="tab">Manage Score Config</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#doc" data-toggle="tab">Document Type</a>
+                    </li>
+
+
+                </ul>
+            </div><!-- card-header -->
+
+            <div class="tab-content">
+                <div class="tab-pane active" id="doc">
+                    <div class="mg-y-30">
+                        <a href="#modaldemo8" class="btn btn-main modal-effect" data-toggle="modal"
+                            data-effect="effect-sign">Create Document Type</a>
+                    </div>
+
+                    <div class="table-wrapper table-responsive">
+                        <table id="datatable2" class="table display responsive nowrap">
+                            <thead>
+                                <tr>
+                                    <th class="wd-25p">Document Name</th>
+                                    <th class="wd-25p">Required</th>
+                                    <th class="wd-25p">Document Type</th>
+                                    <th class="wd-25p">Action</th>
+                                    <th></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+
+                                <tr>
+                                    <td>
+                                        <div class="form-group">
+                                            <input class="form-control" type="text" name="firstname"
+                                                placeholder="Passport" />
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="form-group">
+                                            <select class="form-control select2" data-placeholder="Yes">
+                                                <option label="Yes">Yes</option>
+                                                <option value="No">No</option>
+
+                                            </select>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="form-group">
+                                            <input class="form-control" type="text" name="firstname"
+                                                placeholder="JEPG, PNG, PDF" />
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <a href="" class="btn btn-payout margin-minus  ">Save</a>
+                                    </td>
+
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="form-group">
+                                            <input class="form-control" type="text" name="firstname"
+                                                placeholder="Passport" />
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="form-group">
+                                            <select class="form-control select2" data-placeholder="Yes">
+                                                <option label="Yes">Yes</option>
+                                                <option value="No">No</option>
+
+                                            </select>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="form-group">
+                                            <input class="form-control" type="text" name="firstname"
+                                                placeholder="JEPG, PNG, PDF" />
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <a href="" class="btn btn-payout margin-minus  ">Save</a>
+                                    </td>
+
+                                </tr>
+
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="tab-pane " id="general">
+
+                </div>
+                <div class="tab-pane" id="score">
+
+                </div>
+                <div class="tab-pane" id="loan">
+                    <div class="table-wrapper table-responsive mg-t-30">
+                        <table id="datatable2" class="table display responsive nowrap">
+                            <thead>
+                                <tr>
+                                    <th class="wd-25p">Min</th>
+                                    <th class="wd-25p">Max</th>
+                                    <th class="wd-25p">Min Month</th>
+                                    <th class="wd-25p">Max Month</th>
+                                    <th class="wd-25p">Min Score</th>
+                                    <th class="wd-25p">Max Score</th>
+                                    <th></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+
+                                <tr>
+                                    <td>
+                                        <div class="form-group">
+                                            <input class="form-control" type="text" name="firstname"
+                                                placeholder="10,000" />
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="form-group">
+                                            <input class="form-control" type="text" name="firstname"
+                                                placeholder="25,000" />
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="form-group">
+                                            <input class="form-control" type="text" name="firstname" placeholder="1" />
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="form-group">
+                                            <input class="form-control" type="text" name="firstname" placeholder="1" />
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="form-group">
+                                            <input class="form-control" type="text" name="firstname"
+                                                placeholder="150" />
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="form-group">
+                                            <input class="form-control" type="text" name="firstname"
+                                                placeholder="250" />
+                                        </div>
+                                    </td>
+
+                                    <td>
+                                        <a href="" class="btn btn-payout margin-minus  ">Save</a>
+                                    </td>
+
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="form-group">
+                                            <input class="form-control" type="text" name="firstname"
+                                                placeholder="10,000" />
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="form-group">
+                                            <input class="form-control" type="text" name="firstname"
+                                                placeholder="25,000" />
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="form-group">
+                                            <input class="form-control" type="text" name="firstname" placeholder="1" />
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="form-group">
+                                            <input class="form-control" type="text" name="firstname" placeholder="1" />
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="form-group">
+                                            <input class="form-control" type="text" name="firstname"
+                                                placeholder="150" />
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="form-group">
+                                            <input class="form-control" type="text" name="firstname"
+                                                placeholder="250" />
+                                        </div>
+                                    </td>
+
+                                    <td>
+                                        <a href="" class="btn btn-payout margin-minus  ">Save</a>
+                                    </td>
+
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="form-group">
+                                            <input class="form-control" type="text" name="firstname"
+                                                placeholder="10,000" />
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="form-group">
+                                            <input class="form-control" type="text" name="firstname"
+                                                placeholder="25,000" />
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="form-group">
+                                            <input class="form-control" type="text" name="firstname" placeholder="1" />
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="form-group">
+                                            <input class="form-control" type="text" name="firstname" placeholder="1" />
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="form-group">
+                                            <input class="form-control" type="text" name="firstname"
+                                                placeholder="150" />
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="form-group">
+                                            <input class="form-control" type="text" name="firstname"
+                                                placeholder="250" />
+                                        </div>
+                                    </td>
+
+                                    <td>
+                                        <a href="" class="btn btn-payout margin-minus  ">Save</a>
+                                    </td>
+
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="form-group">
+                                            <input class="form-control" type="text" name="firstname"
+                                                placeholder="10,000" />
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="form-group">
+                                            <input class="form-control" type="text" name="firstname"
+                                                placeholder="25,000" />
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="form-group">
+                                            <input class="form-control" type="text" name="firstname" placeholder="1" />
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="form-group">
+                                            <input class="form-control" type="text" name="firstname" placeholder="1" />
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="form-group">
+                                            <input class="form-control" type="text" name="firstname"
+                                                placeholder="150" />
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="form-group">
+                                            <input class="form-control" type="text" name="firstname"
+                                                placeholder="250" />
+                                        </div>
+                                    </td>
+
+                                    <td>
+                                        <a href="" class="btn btn-payout margin-minus  ">Save</a>
+                                    </td>
+
+                                </tr>
+
+
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div id="modaldemo8" class="modal fade nodscore-Modal">
+                <div class="modal-dialog modal-dialog-vertical-center" role="document">
+                    <div class="modal-content bd-0 tx-14">
+                        <div class="modal-header pd-y-20 pd-x-25 m-auto">
+                            <div>
+                                <h6 class="tx-14 mg-b-0 pd-t-10 tx-500 ">Create Document Type</h6>
+                            </div>
+
+
+                        </div>
+                        <div class="modal-body  pd-x-25 pd-t-0 nodscore">
+
+
+
+                            <div class="form-group">
+                                <label class="form-control-label">Document Type </label>
+                                <input class="form-control" type="text" name="firstname" placeholder="" />
+
+                            </div>
+                            <div class="form-group">
+                                <label class="form-control-label">Required?</label>
+                                <select class="form-control select2" data-placeholder="Yes">
+                                    <!-- <option label="Yes"></option> -->
+                                    <option value="Yes">Yes</option>
+                                    <option value="No">No</option>
+
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="form-control-label">Document Type </label>
+                                <input class="form-control" type="text" name="firstname" placeholder="" />
+
+                            </div>
+
+
+
+                            <hr>
+                            <div class="text-center mg-t-30">
+                                <div class="d-inline-flex mg-r-30"><a href="" class="dark-two " data-dismiss="modal"
+                                        aria-label="Close">Cancel</a>
+                                </div>
+                                <div class="d-inline-flex"><a href=""
+                                        class="btn btn-primary btn-block btn-main">Create</a>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div><!-- modal-dialog -->
+            </div><!-- modal -->
+
+
+        </div><!-- container -->
+    </div><!-- slim-mainpanel -->
+
+    <!--<div class="slim-footer">
+        <div class="container">
+            <p>Copyright 2019 &copy; All Rights Reserved. NodCredit</p>
+            <p>Designed by: <a href="http://ifeanyiernest.com">Ifeanyi</a></p>
+        </div> container 
+    </div> slim-footer -->
+
+    <script src="../lib/jquery/js/jquery.js"></script>
+    <script src="../lib/popper.js/js/popper.js"></script>
+    <script src="../lib/bootstrap/js/bootstrap.js"></script>
+    <script src="../lib/jquery.cookie/js/jquery.cookie.js"></script>
+    <script src="../lib/chartist/js/chartist.js"></script>
+    <script src="../lib/d3/js/d3.js"></script>
+    <script src="../lib/rickshaw/js/rickshaw.min.js"></script>
+    <script src="../lib/jquery.sparkline.bower/js/jquery.sparkline.min.js"></script>
+
+    <script src="../js/ResizeSensor.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <script src="../js/dashboard.js"></script>
+    <script src="../js/slim.js"></script>
+</body>
+
+</html>

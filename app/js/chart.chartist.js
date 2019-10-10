@@ -1,4 +1,4 @@
-$(function(){
+$(function () {
   'use strict'
 
 
@@ -9,7 +9,7 @@ $(function(){
     series: [
       [12, 9, 7, 8, 5]
     ]
-  },{
+  }, {
     high: 30,
     axisY: {
       onlyInteger: true
@@ -22,7 +22,7 @@ $(function(){
   });
 
   // resize chart when container changest it's width
-  new ResizeSensor($('.slim-mainpanel'), function(){
+  new ResizeSensor($('.slim-mainpanel'), function () {
     line1.update();
   });
 
@@ -35,7 +35,7 @@ $(function(){
       [2, 1, 5, 7, 3],
       [1, 3, 4, 5, 6]
     ]
-  },{
+  }, {
     high: 30,
     axisY: {
       onlyInteger: true
@@ -48,7 +48,7 @@ $(function(){
   });
 
   // resize chart when container changest it's width
-  new ResizeSensor($('.slim-mainpanel'), function(){
+  new ResizeSensor($('.slim-mainpanel'), function () {
     line2.update();
   });
 
@@ -95,7 +95,7 @@ $(function(){
   });
 
   // resize chart when container changest it's width
-  new ResizeSensor($('.slim-mainpanel'), function(){
+  new ResizeSensor($('.slim-mainpanel'), function () {
     area1.update();
     area2.update();
   });
@@ -122,28 +122,29 @@ $(function(){
   });
 
   var bar2 = new Chartist.Bar('#chartBar2', {
-    labels: [1, 2, 3, 4, 5, 6, 7, 8],
+    labels: ['JAN', 'FEB', 'MAR', 'APR', 'MAY', 'JUN', 'JUL', 'AUG', 'SEP', 'OCT', 'NOV', 'DEC'],
     series: [
-      [5, 9, 7, 8, 5, 3, 5, 4],
-      [10, 15, 10, 20, 18, 11, 16, 18]
+      [500000, 900000, 70000, 80000, 500000, 300000, 50000, 400000, 700000, 400000, 600000, 700000],
+      [100000, 450000, 100000, 200000, 800000, 100000, 160000, 800000, 880000, 610000, 960000, 180000]
     ]
   }, {
-    high: 30,
+    high: 1000000,
     low: 0,
     axisY: {
-      onlyInteger: true
+      onlyInteger: false
     },
     showArea: true,
     fullWidth: true,
     chartPadding: {
       bottom: 0,
       left: 0
-    }
+    },
+
   });
 
 
   // resize chart when container changest it's width
-  new ResizeSensor($('.slim-mainpanel'), function(){
+  new ResizeSensor($('.slim-mainpanel'), function () {
     bar1.update();
     bar2.update();
   });
@@ -194,7 +195,7 @@ $(function(){
 
 
   // resize chart when container changest it's width
-  new ResizeSensor($('.slim-mainpanel'), function(){
+  new ResizeSensor($('.slim-mainpanel'), function () {
     bar3.update();
     bar4.update();
   });
@@ -213,12 +214,12 @@ $(function(){
   }, {
     stackBars: true,
     axisY: {
-      labelInterpolationFnc: function(value) {
+      labelInterpolationFnc: function (value) {
         return (value / 1000) + 'k';
       }
     }
-  }).on('draw', function(data) {
-    if(data.type === 'bar') {
+  }).on('draw', function (data) {
+    if (data.type === 'bar') {
       data.element.attr({
         style: 'stroke-width: 30px'
       });
@@ -237,7 +238,7 @@ $(function(){
     stackBars: true,
     horizontalBars: true,
     axisX: {
-      labelInterpolationFnc: function(value) {
+      labelInterpolationFnc: function (value) {
         return (value / 1000) + 'k';
       }
     },
@@ -246,8 +247,8 @@ $(function(){
       left: 0,
       right: 40
     }
-  }).on('draw', function(data) {
-    if(data.type === 'bar') {
+  }).on('draw', function (data) {
+    if (data.type === 'bar') {
       data.element.attr({
         style: 'stroke-width: 30px'
       });
@@ -255,7 +256,7 @@ $(function(){
   });
 
   // resize chart when container changest it's width
-  new ResizeSensor($('.slim-mainpanel'), function(){
+  new ResizeSensor($('.slim-mainpanel'), function () {
     bar5.update();
     bar6.update();
   });
@@ -264,14 +265,16 @@ $(function(){
 
   /********************* PIE CHART *********************/
 
-  var sum = function(a, b) { return a + b };
+  var sum = function (a, b) {
+    return a + b
+  };
 
   var data = {
     series: [5, 3, 4]
   };
 
   var pie1 = new Chartist.Pie('#chartPie1', data, {
-    labelInterpolationFnc: function(value) {
+    labelInterpolationFnc: function (value) {
       return Math.round(value / data.series.reduce(sum) * 100) + '%';
     }
   });
@@ -284,14 +287,14 @@ $(function(){
   };
 
   var pie2 = new Chartist.Pie('#chartPie2', data2, {
-    labelInterpolationFnc: function(value) {
+    labelInterpolationFnc: function (value) {
       return Math.round(value / data.series.reduce(sum) * 100) + '%';
     }
   });
 
 
   // resize chart when container changest it's width
-  new ResizeSensor($('.slim-mainpanel'), function(){
+  new ResizeSensor($('.slim-mainpanel'), function () {
     pie1.update();
     pie2.update();
   });
@@ -319,7 +322,7 @@ $(function(){
   });
 
   // resize chart when container changest it's width
-  new ResizeSensor($('.slim-mainpanel'), function(){
+  new ResizeSensor($('.slim-mainpanel'), function () {
     donut1.update();
     donut2.update();
   });

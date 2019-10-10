@@ -4,7 +4,7 @@
 <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name=" View Loanport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="description" content=" ">
@@ -22,9 +22,9 @@
     <!-- vendor css -->
     <link href="../lib/font-awesome/css/font-awesome.css" rel="stylesheet">
     <link href="../lib/Ionicons/css/ionicons.css" rel="stylesheet">
-    <link href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css" rel="stylesheet">
     <link href="../lib/datatables/css/jquery.dataTables.css" rel="stylesheet">
     <link href="../lib/select2/css/select2.min.css" rel="stylesheet">
+    <link href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css" rel="stylesheet">
 
     <!-- Slim CSS -->
     <link rel="stylesheet" href="../css/custom.css">
@@ -73,16 +73,27 @@
                     </a>
                 </li>
                 <li class="nav-item ">
-                    <a class="nav-link" href="invest.html">
-
-                        <i class="icon ion-ios-rocket"></i>
-                        <span>Invest</span>
+                    <a class="nav-link" href="loans.html">
+                        <i class="icon ion-ios-checkmark-circle"></i>
+                        <span>Loan</span>
                     </a>
                 </li>
                 <li class="nav-item active">
                     <a class="nav-link" href="investments.html">
-                        <i class="icon ion-ios-list"></i>
-                        <span>My Investments</span>
+                        <i class="icon ion-ios-rocket"></i>
+                        <span>Investments</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="transactions.html">
+                        <i class="icon ion-ios-swap"></i>
+                        <span>Transactions</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="account.html">
+                        <i class="icon ion-ios-contacts"></i>
+                        <span>Accounts</span>
                     </a>
                 </li>
                 <li class="nav-item">
@@ -98,11 +109,14 @@
 
     <div class="slim-mainpanel">
         <div class="container mg-y-50">
+            <h3>Investments</h3>
+            <div class="mg-y-30">
+                <a href="invest.html" class="btn btn-main ">New Investment</a>
+            </div>
 
-            <h3 class="pd-t-10">My Investments</h3>
             <div class="row mg-y-20">
                 <div class="col-12 col-md-6  m-auto">
-                    <h4 class="tx-normal tx-18">13 Investments</h4>
+                    <h4 class="tx-normal tx-18">120 Investments</h4>
                 </div>
                 <div class="col-12 col-md-6">
                     <div class="row table-nod">
@@ -115,28 +129,32 @@
                             </div><!-- search-box -->
                         </div>
                         <div class="col-4">
-                            <select class="form-control select2" data-placeholder="Filter By">
-                                <option label="Filter By"></option>
-                                <option value="Completed Investments">Completed Investments</option>
-                                <option value="Active Investments">Active Investments</option>
-                                <option value="Liquidated Investments">Liquidated Investments</option>
+                            <select class="form-control select2" data-placeholder="Filter by: Status">
+                                <option label="Filter by: Status"></option>
+                                <option value="Completed Investments">Active</option>
+                                <option value="Active Investments">Liquidated</option>
+                                <option value="Active Investments">Completed</option>
                             </select>
                         </div>
                     </div>
 
                 </div>
             </div>
+
+
             <div class="table-wrapper table-responsive">
-                <table id="datatable2" class="table display responsive nowrap">
+                <table id="datatable2" class="table display responsive">
                     <thead>
                         <tr>
                             <th class="wd-15p">Investment Name</th>
-                            <th class="wd-15p">Net Amount</th>
-                            <th class="wd-20p">Rate</th>
-                            <th class="wd-15p">Current Returns</th>
-                            <th class="wd-15p">Maturity Date</th>
-                            <th class="wd-10p">Status</th>
-                            <th></th>
+                            <th class="wd-5p">Amount</th>
+                            <th class="wd-5p">Interest <br>Accured</th>
+                            <th class="wd-5p">Interest</th>
+                            <th class="wd-15p">Customer Details</th>
+                            <th class="wd-5p">Date Created</th>
+                            <th class="wd-5p">Tenor</th>
+                            <th class="wd-5p">Maturity Date</th>
+                            <th class="wd-15p">Status</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -144,166 +162,204 @@
                         <tr>
                             <td>My First Investment</td>
                             <td>₦ 500,000</td>
+                            <td>₦12,450</td>
                             <td>30%</td>
-                            <td>₦ 5,000</td>
+                            <td>Awaatif Al Sadek <span> <a href="mailto:obadafidii@gmail.com">obadafidii@gmail.com</a>
+                                </span></td>
+                            <td>20, Nov 2019</td>
+                            <td>1 year</td>
                             <td>20, Nov 2020</td>
                             <td><span class="square-8 nodbluebg mg-r-5 rounded-circle"></span>
                                 Active</td>
-                            <td><a href="activeinvestment.html" class="btn btn-table">
-                                    View
-                                </a></td>
                         </tr>
                         <tr>
                             <td>My First Investment</td>
                             <td>₦ 500,000</td>
+                            <td>₦12,450</td>
                             <td>30%</td>
-                            <td>₦ 5,000</td>
-                            <td>20, Nov 2020</td>
-                            <td><span class="square-8 bg-success mg-r-5 rounded-circle"></span>
-                                Completed</td>
-                            <td><a href="investdetail.html" class="btn btn-table">
-                                    View
-                                </a></td>
-                        </tr>
-                        <tr>
-                            <td>My First Investment</td>
-                            <td>₦ 500,000</td>
-                            <td>30%</td>
-                            <td>₦ 5,000</td>
+                            <td>Awaatif Al Sadek <span> <a href="mailto:obadafidii@gmail.com">obadafidii@gmail.com</a>
+                                </span></td>
+                            <td>20, Nov 2019</td>
+                            <td>1 year</td>
                             <td>20, Nov 2020</td>
                             <td><span class="square-8 bg-danger mg-r-5 rounded-circle"></span>
                                 Liquidated</td>
-                            <td><a href="investdetail-liquidated.html" class="btn btn-table">
-                                    View
-                                </a></td>
                         </tr>
                         <tr>
                             <td>My First Investment</td>
                             <td>₦ 500,000</td>
+                            <td>₦12,450</td>
                             <td>30%</td>
-                            <td>₦ 5,000</td>
-                            <td>20, Nov 2020</td>
-                            <td><span class="square-8 bg-success mg-r-5 rounded-circle"></span>
-                                Completed</td>
-                            <td><a href="investdetail.html" class="btn btn-table">
-                                    View
-                                </a></td>
-                        </tr>
-                        <tr>
-                            <td>My First Investment</td>
-                            <td>₦ 500,000</td>
-                            <td>30%</td>
-                            <td>₦ 5,000</td>
-                            <td>20, Nov 2020</td>
-                            <td><span class="square-8 bg-success mg-r-5 rounded-circle"></span>
-                                Completed</td>
-                            <td><a href="investdetail.html" class="btn btn-table">
-                                    View
-                                </a></td>
-                        </tr>
-                        <tr>
-                            <td>My First Investment</td>
-                            <td>₦ 500,000</td>
-                            <td>30%</td>
-                            <td>₦ 5,000</td>
+                            <td>Awaatif Al Sadek <span> <a href="mailto:obadafidii@gmail.com">obadafidii@gmail.com</a>
+                                </span></td>
+                            <td>20, Nov 2019</td>
+                            <td>1 year</td>
                             <td>20, Nov 2020</td>
                             <td><span class="square-8 bg-danger mg-r-5 rounded-circle"></span>
                                 Liquidated</td>
-                            <td><a href="investdetail.html" class="btn btn-table">
-                                    View
-                                </a></td>
                         </tr>
                         <tr>
                             <td>My First Investment</td>
                             <td>₦ 500,000</td>
+                            <td>₦12,450</td>
                             <td>30%</td>
-                            <td>₦ 5,000</td>
-                            <td>20, Nov 2020</td>
-                            <td><span class="square-8 bg-success mg-r-5 rounded-circle"></span>
-                                Completed</td>
-                            <td><a href="investdetail.html" class="btn btn-table">
-                                    View
-                                </a></td>
-                        </tr>
-                        <tr>
-                            <td>My First Investment</td>
-                            <td>₦ 500,000</td>
-                            <td>30%</td>
-                            <td>₦ 5,000</td>
-                            <td>20, Nov 2020</td>
-                            <td><span class="square-8 bg-success mg-r-5 rounded-circle"></span>
-                                Completed</td>
-                            <td><a href="investdetail.html" class="btn btn-table">
-                                    View
-                                </a></td>
-                        </tr>
-                        <tr>
-                            <td>My First Investment</td>
-                            <td>₦ 500,000</td>
-                            <td>30%</td>
-                            <td>₦ 5,000</td>
-                            <td>20, Nov 2020</td>
-                            <td><span class="square-8 bg-success mg-r-5 rounded-circle"></span>
-                                Completed</td>
-                            <td><a href="investdetail.html" class="btn btn-table">
-                                    View
-                                </a></td>
-                        </tr>
-                        <tr>
-                            <td>My First Investment</td>
-                            <td>₦ 500,000</td>
-                            <td>30%</td>
-                            <td>₦ 5,000</td>
-                            <td>20, Nov 2020</td>
-                            <td><span class="square-8 bg-success mg-r-5 rounded-circle"></span>
-                                Completed</td>
-                            <td><a href="investdetail.html" class="btn btn-table">
-                                    View
-                                </a></td>
-                        </tr>
-                        <tr>
-                            <td>My First Investment</td>
-                            <td>₦ 500,000</td>
-                            <td>30%</td>
-                            <td>₦ 5,000</td>
+                            <td>Awaatif Al Sadek <span> <a href="mailto:obadafidii@gmail.com">obadafidii@gmail.com</a>
+                                </span></td>
+                            <td>20, Nov 2019</td>
+                            <td>1 year</td>
                             <td>20, Nov 2020</td>
                             <td><span class="square-8 bg-danger mg-r-5 rounded-circle"></span>
                                 Liquidated</td>
-                            <td><a href="investdetail.html" class="btn btn-table">
-                                    View
-                                </a></td>
                         </tr>
                         <tr>
                             <td>My First Investment</td>
                             <td>₦ 500,000</td>
+                            <td>₦12,450</td>
                             <td>30%</td>
-                            <td>₦ 5,000</td>
+                            <td>Awaatif Al Sadek <span> <a href="mailto:obadafidii@gmail.com">obadafidii@gmail.com</a>
+                                </span></td>
+                            <td>20, Nov 2019</td>
+                            <td>1 year</td>
                             <td>20, Nov 2020</td>
-                            <td><span class="square-8 bg-danger mg-r-5 rounded-circle"></span>
-                                Liquidated</td>
-                            <td><a href="investdetail.html" class="btn btn-table">
-                                    View
-                                </a></td>
+                            <td><span class="square-8 bg-success mg-r-5 rounded-circle"></span>
+                                Completed</td>
                         </tr>
                         <tr>
                             <td>My First Investment</td>
                             <td>₦ 500,000</td>
+                            <td>₦12,450</td>
                             <td>30%</td>
-                            <td>₦ 5,000</td>
+                            <td>Awaatif Al Sadek <span> <a href="mailto:obadafidii@gmail.com">obadafidii@gmail.com</a>
+                                </span></td>
+                            <td>20, Nov 2019</td>
+                            <td>1 year</td>
                             <td>20, Nov 2020</td>
-                            <td><span class="square-8 bg-danger mg-r-5 rounded-circle"></span>
-                                Liquidated</td>
-                            <td><a href="investdetail.html" class="btn btn-table">
-                                    View
-                                </a></td>
+                            <td><span class="square-8 bg-success mg-r-5 rounded-circle"></span>
+                                Completed</td>
                         </tr>
+                        <tr>
+                            <td>My First Investment</td>
+                            <td>₦ 500,000</td>
+                            <td>₦12,450</td>
+                            <td>30%</td>
+                            <td>Awaatif Al Sadek <span> <a href="mailto:obadafidii@gmail.com">obadafidii@gmail.com</a>
+                                </span></td>
+                            <td>20, Nov 2019</td>
+                            <td>1 year</td>
+                            <td>20, Nov 2020</td>
+                            <td><span class="square-8 bg-success mg-r-5 rounded-circle"></span>
+                                Completed</td>
+                        </tr>
+                        <tr>
+                            <td>My First Investment</td>
+                            <td>₦ 500,000</td>
+                            <td>₦12,450</td>
+                            <td>30%</td>
+                            <td>Awaatif Al Sadek <span> <a href="mailto:obadafidii@gmail.com">obadafidii@gmail.com</a>
+                                </span></td>
+                            <td>20, Nov 2019</td>
+                            <td>1 year</td>
+                            <td>20, Nov 2020</td>
+                            <td><span class="square-8 bg-success mg-r-5 rounded-circle"></span>
+                                Completed</td>
+                        </tr>
+                        <tr>
+                            <td>My First Investment</td>
+                            <td>₦ 500,000</td>
+                            <td>₦12,450</td>
+                            <td>30%</td>
+                            <td>Awaatif Al Sadek <span> <a href="mailto:obadafidii@gmail.com">obadafidii@gmail.com</a>
+                                </span></td>
+                            <td>20, Nov 2019</td>
+                            <td>1 year</td>
+                            <td>20, Nov 2020</td>
+                            <td><span class="square-8 bg-success mg-r-5 rounded-circle"></span>
+                                Completed</td>
+                        </tr>
+                        <tr>
+                            <td>My First Investment</td>
+                            <td>₦ 500,000</td>
+                            <td>₦12,450</td>
+                            <td>30%</td>
+                            <td>Awaatif Al Sadek <span> <a href="mailto:obadafidii@gmail.com">obadafidii@gmail.com</a>
+                                </span></td>
+                            <td>20, Nov 2019</td>
+                            <td>1 year</td>
+                            <td>20, Nov 2020</td>
+                            <td><span class="square-8 bg-success mg-r-5 rounded-circle"></span>
+                                Completed</td>
+                        </tr>
+                        <tr>
+                            <td>My First Investment</td>
+                            <td>₦ 500,000</td>
+                            <td>₦12,450</td>
+                            <td>30%</td>
+                            <td>Awaatif Al Sadek <span> <a href="mailto:obadafidii@gmail.com">obadafidii@gmail.com</a>
+                                </span></td>
+                            <td>20, Nov 2019</td>
+                            <td>1 year</td>
+                            <td>20, Nov 2020</td>
+                            <td><span class="square-8 bg-success mg-r-5 rounded-circle"></span>
+                                Completed</td>
+                        </tr>
+                        <tr>
+                            <td>My First Investment</td>
+                            <td>₦ 500,000</td>
+                            <td>₦12,450</td>
+                            <td>30%</td>
+                            <td>Awaatif Al Sadek <span> <a href="mailto:obadafidii@gmail.com">obadafidii@gmail.com</a>
+                                </span></td>
+                            <td>20, Nov 2019</td>
+                            <td>1 year</td>
+                            <td>20, Nov 2020</td>
+                            <td><span class="square-8 bg-success mg-r-5 rounded-circle"></span>
+                                Completed</td>
+                        </tr>
+                        <tr>
+                            <td>My First Investment</td>
+                            <td>₦ 500,000</td>
+                            <td>₦12,450</td>
+                            <td>30%</td>
+                            <td>Awaatif Al Sadek <span> <a href="mailto:obadafidii@gmail.com">obadafidii@gmail.com</a>
+                                </span></td>
+                            <td>20, Nov 2019</td>
+                            <td>1 year</td>
+                            <td>20, Nov 2020</td>
+                            <td><span class="square-8 bg-success mg-r-5 rounded-circle"></span>
+                                Completed</td>
+                        </tr>
+                        <tr>
+                            <td>My First Investment</td>
+                            <td>₦ 500,000</td>
+                            <td>₦12,450</td>
+                            <td>30%</td>
+                            <td>Awaatif Al Sadek <span> <a href="mailto:obadafidii@gmail.com">obadafidii@gmail.com</a>
+                                </span></td>
+                            <td>20, Nov 2019</td>
+                            <td>1 year</td>
+                            <td>20, Nov 2020</td>
+                            <td><span class="square-8 bg-success mg-r-5 rounded-circle"></span>
+                                Completed</td>
+                        </tr>
+                        <tr>
+                            <td>My First Investment</td>
+                            <td>₦ 500,000</td>
+                            <td>₦12,450</td>
+                            <td>30%</td>
+                            <td>Awaatif Al Sadek <span> <a href="mailto:obadafidii@gmail.com">obadafidii@gmail.com</a>
+                                </span></td>
+                            <td>20, Nov 2019</td>
+                            <td>1 year</td>
+                            <td>20, Nov 2020</td>
+                            <td><span class="square-8 bg-success mg-r-5 rounded-circle"></span>
+                                Completed</td>
+                        </tr>
+
+
 
                     </tbody>
                 </table>
             </div>
-
-
-
 
         </div><!-- container -->
     </div><!-- slim-mainpanel -->

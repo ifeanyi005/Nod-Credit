@@ -4,7 +4,7 @@
 <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name=" View Loanport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="description" content=" ">
@@ -22,8 +22,8 @@
     <!-- vendor css -->
     <link href="../lib/font-awesome/css/font-awesome.css" rel="stylesheet">
     <link href="../lib/Ionicons/css/ionicons.css" rel="stylesheet">
-    <link href="../lib/chartist/css/chartist.css" rel="stylesheet">
-    <link href="../lib/rickshaw/css/rickshaw.min.css" rel="stylesheet">
+    <link href="../lib/datatables/css/jquery.dataTables.css" rel="stylesheet">
+    <link href="../lib/select2/css/select2.min.css" rel="stylesheet">
     <link href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css" rel="stylesheet">
 
     <!-- Slim CSS -->
@@ -72,21 +72,32 @@
                         <span>Dashboard</span>
                     </a>
                 </li>
+                <li class="nav-item ">
+                    <a class="nav-link" href="loans.html">
+                        <i class="icon ion-ios-checkmark-circle"></i>
+                        <span>Loan</span>
+                    </a>
+                </li>
                 <li class="nav-item active">
-                    <a class="nav-link" href="invest.html">
-
-                        <i class="icon ion-ios-rocket"></i>
-                        <span>Invest</span>
-                    </a>
-                </li>
-                <li class="nav-item">
                     <a class="nav-link" href="investments.html">
-                        <i class="icon ion-ios-list"></i>
-                        <span>My Investments</span>
+                        <i class="icon ion-ios-rocket"></i>
+                        <span>Investments</span>
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="">
+                    <a class="nav-link" href="transactions.html">
+                        <i class="icon ion-ios-swap"></i>
+                        <span>Transactions</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="account.html">
+                        <i class="icon ion-ios-contacts"></i>
+                        <span>Accounts</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="settings.html">
                         <i class="icon ion-ios-gear"></i>
                         <span>Profile Settings</span>
                     </a>
@@ -98,6 +109,7 @@
 
     <div class="slim-mainpanel">
         <div class="container mg-y-50">
+
 
             <div class="flexbox-centering mg-t-50">
                 <div class="child text-center">
@@ -144,8 +156,11 @@
                                         </div>
                                         <div class="form-group">
                                             <label class="form-control-label">Select Investor</label>
-                                            <input class="form-control" type="text" name="firstname"
-                                                placeholder="E.g My First Investment" />
+                                            <select class="form-control select2" data-placeholder="Select investor">
+                                                <option label="Select Investor"></option>
+                                                <option value="Philip Samuel">Philip Samuel</option>
+                                                <option value="joy">Joy Olaoluwa</option>
+                                            </select>
 
                                         </div>
                                         <div class="form-group">
@@ -154,6 +169,7 @@
                                                 placeholder="500,000" />
 
                                         </div>
+
                                         <div class="selector">
                                             <label class="form-control-label tx-medium">Select duration/amount
                                             </label>
@@ -223,15 +239,37 @@
     <script src="../lib/popper.js/js/popper.js"></script>
     <script src="../lib/bootstrap/js/bootstrap.js"></script>
     <script src="../lib/jquery.cookie/js/jquery.cookie.js"></script>
-    <script src="../lib/chartist/js/chartist.js"></script>
-    <script src="../lib/d3/js/d3.js"></script>
-    <script src="../lib/rickshaw/js/rickshaw.min.js"></script>
-    <script src="../lib/jquery.sparkline.bower/js/jquery.sparkline.min.js"></script>
+    <script src="../lib/datatables/js/jquery.dataTables.js"></script>
+    <!-- <script src="../lib/datatables-responsive/js/dataTables.responsive.js"></script> -->
+    <script src="../lib/select2/js/select2.min.js"></script>
 
-    <script src="../js/ResizeSensor.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
-    <script src="../js/dashboard.js"></script>
     <script src="../js/slim.js"></script>
+    <script>
+        $(function () {
+            'use strict';
+
+            $('#datatable1').DataTable({
+                responsive: true,
+                language: {
+                    searchPlaceholder: 'Search...',
+                    sSearch: '',
+                    lengthMenu: '_MENU_ items/page',
+                }
+            });
+
+            $('#datatable2').DataTable({
+                bLengthChange: false,
+                searching: false,
+                responsive: true
+            });
+
+            // Select2
+            $('.dataTables_length select').select2({
+                minimumResultsForSearch: Infinity
+            });
+
+        });
+    </script>
 </body>
 
 </html>
