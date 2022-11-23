@@ -5,7 +5,7 @@
   "main": "index.js",
   "author": "ThemePixels",
   "devDependencies": {
-    "browser-sync": "^2.23.6",
+    "browser-sync": "^2.27.10",
     "gulp": "^3.9.1",
     "gulp-bower-normalize": "^1.1.1",
     "gulp-clean-css": "^3.9.2",
